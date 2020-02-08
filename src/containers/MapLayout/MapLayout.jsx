@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import { useBoxes } from "../../hooks/useBoxes";
 import {Map} from "../../components/Map";
 
-export default function MapLayout() {
+export function MapLayout() {
   const { isLoading, boxes } = useBoxes();
 
   return (
