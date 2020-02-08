@@ -20,6 +20,8 @@ import {Vector as VectorLayer} from 'ol/layer';
 const Map = ({ markers, onMarkerClick }) => {
   const [ vectorSource, setVectorSource ] = useState();
 
+  let mounted = true;
+
   useEffect(() => {
     // Create open street map layer
     let source = new OlXYZ({
@@ -53,15 +55,13 @@ const Map = ({ markers, onMarkerClick }) => {
     let first = true;
 
     map.on('singleclick', event => {
+      if (!onMarkerClick) {
+        return;
+      }
+
       const feature = map.forEachFeatureAtPixel(event.pixel, feature => {
         return feature;
       });
-
-      var latLong = transform(event.coordinate, 'EPSG:3857', 'EPSG:4326');
-      // var lat     = latLong[1];
-      // var long    = latLong[0];
-
-      console.log(latLong);
 
       if (!feature) {
         return;
@@ -80,10 +80,16 @@ const Map = ({ markers, onMarkerClick }) => {
       if(first) {
         first = false;
 
-        setVectorSource(vectorSource);
+        if (mounted) {
+          setVectorSource(vectorSource);
+        }
       }
     });
-  }, [setVectorSource, onMarkerClick]);
+
+    return () => {
+      mounted = false;
+    }
+  }, []);
 
   useEffect(() => {
     if (!vectorSource) {

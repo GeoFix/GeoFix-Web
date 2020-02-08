@@ -15,7 +15,10 @@ export const useBoxes = () => {
       // .where('cities', 'array-contains', city)
       .onSnapshot((snap) => {
         const boxes = snap.docs
-          .map((doc) => doc.data());
+          .map((doc) => ({
+            id: doc.id,
+            ...doc.data()
+          }));
 
         console.log(boxes);
 
