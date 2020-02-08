@@ -2,30 +2,37 @@ import {useEffect, useState} from "react";
 
 import firebase from "../utils/firebase";
 
-export const useBoxes = () => {
+export const useBoxes = (tools) => {
   const [isLoading, setIsLoading] = useState(false);
   const [boxes, setBoxes] = useState([]);
 
   useEffect(() => {
     setIsLoading(true);
 
-    const unsubscribe = firebase
+    firebase
       .firestore()
       .collection('/boxes')
-      .onSnapshot((snap) => {
-        const boxes = snap.docs
+      .get()
+      .then((snap) => {
+        let boxes = snap.docs
           .map((doc) => ({
             id: doc.id,
             ...doc.data()
           }));
 
+        if (tools.length > 0) {
+          boxes = boxes.filter(box => {
+            return box.tools.find(tool => {
+              return tools.includes(tool.tool.id);
+            });
+          });
+        }
+
         setBoxes(boxes);
 
         setIsLoading(false);
       }, console.error.bind(console));
-
-    return () => unsubscribe();
-  }, []);
+  }, [tools]);
 
   return {isLoading, boxes};
 };
