@@ -1,15 +1,20 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { MapLayout } from "./containers/MapLayout";
 
 import './App.css';
 
-import { Map } from "./components/Map/Map";
-
-function App() {
+export default function App() {
   return (
-    <>
-      <Map />
-    </>
+    <Router>
+      <Switch>
+        <Route path="/" exact>
+          <MapLayout />
+        </Route>
+        <Route path="/create">
+          <p>bla</p>
+        </Route>
+      </Switch>
+    </Router>
   );
 }
-
-export default App;
