@@ -138,7 +138,7 @@ const Map = ({markers, onMarkerClick, position}) => {
 
   return (
     <>
-      <div id="map"/>
+      <div id="map" className="map"/>
       <div className="map_copyright">
         &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors,
         Tiles style by <a href="https://www.hotosm.org/" target="_blank" rel="noopener noreferrer">Humanitarian

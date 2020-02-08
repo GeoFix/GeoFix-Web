@@ -1,23 +1,31 @@
-import React, {Fragment} from 'react'
+import React, {Fragment, useState} from 'react'
 import {Plus} from "react-feather";
 import {useCurrentPosition} from "react-use-geolocation";
 import {useHistory} from "react-router-dom";
 
 import {useBoxes} from "../../hooks/useBoxes";
+import {useTools} from "../../hooks/useTools";
 import {RoundButton} from "../../UIElements/RoundButton";
 import {Map} from "../../components/Map";
 import {SplashScreen} from "../../components/SplashScreen/SplashScreen";
+import SearchField from "../../components/SearchField/SearchField";
 
-import './MapLayout.css'
+import './MapLayout.scss'
 
 import illustration_localisation from '../../assets/undraw_location_search_bqps.svg';
 import illustration_error from '../../assets/undraw_cancel_u1it.svg';
 
 export function MapLayout() {
-  const {isLoading, boxes} = useBoxes();
+  const [searchTools, setSearchTools] = useState([]);
+  const {isLoading, boxes} = useBoxes(searchTools);
+  const {tools} = useTools();
   const history = useHistory();
 
   const [position, error] = useCurrentPosition();
+
+  const handleSearch = (values) => {
+    setSearchTools(values.map(item => item.value));
+  };
 
   const openBox = box => {
     history.push(`/boxes/${box.id}`);
@@ -28,7 +36,7 @@ export function MapLayout() {
   }
 
   return (
-    <Fragment>
+    <main className="map-layout">
       {
         !isLoading && boxes.length === 0 ? (
           <SplashScreen image={illustration_error} message="Aucune boites à outils aux alentours."/>
@@ -46,7 +54,15 @@ export function MapLayout() {
           />
         )
       }
+      <SearchField
+        name="tools-search"
+        options={tools.map(tool => ({
+          value: tool.id,
+          label: tool.name,
+        }))}
+        onSearch={handleSearch}
+      />
       <RoundButton icon={<Plus/>}/>
-    </Fragment>
+    </main>
   )
 }
