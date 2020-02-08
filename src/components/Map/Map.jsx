@@ -10,15 +10,15 @@ import OlView from 'ol/View';
 import OlMap from 'ol/Map';
 import Point from 'ol/geom/Point';
 import Feature from 'ol/Feature';
-import { fromLonLat, transform } from 'ol/proj';
+import {fromLonLat, transform} from 'ol/proj';
 import VectorSource from 'ol/source/Vector';
 import {Vector as VectorLayer} from 'ol/layer';
 
 /**
  * Map Component
  */
-const Map = ({ markers, onMarkerClick }) => {
-  const [ vectorSource, setVectorSource ] = useState();
+const Map = ({markers, onMarkerClick, position}) => {
+  const [vectorSource, setVectorSource] = useState();
 
   let mounted = true;
 
@@ -33,7 +33,7 @@ const Map = ({ markers, onMarkerClick }) => {
     });
 
     let view = new OlView({
-      center: fromLonLat([-1.6777926,48.117266]),
+      center: fromLonLat([-1.6777926, 48.117266]),
       zoom: 13
     });
 
@@ -47,9 +47,9 @@ const Map = ({ markers, onMarkerClick }) => {
 
     //Init map
     const map = new OlMap({
-      target : "map",
-      layers:[layer, newPinLayer],
-      view : view
+      target: "map",
+      layers: [layer, newPinLayer],
+      view: view
     });
 
     let first = true;
@@ -76,8 +76,8 @@ const Map = ({ markers, onMarkerClick }) => {
       });
     });
 
-    map.on('rendercomplete',  () => {
-      if(first) {
+    map.on('rendercomplete', () => {
+      if (first) {
         first = false;
 
         if (mounted) {
@@ -110,13 +110,28 @@ const Map = ({ markers, onMarkerClick }) => {
     // iconFeature.setStyle(this.iconStyle);
   }, [markers, vectorSource]);
 
+  useEffect(() => {
+    if (!position || !vectorSource) {
+      return;
+    }
+
+    const {latitude, longitude} = position.coords;
+
+    let iconFeature = new Feature({
+      geometry: new Point(fromLonLat([longitude, latitude])),
+    });
+
+    vectorSource.addFeature(iconFeature);
+  }, [position, vectorSource]);
+
   return (
     <>
       <div id="map"/>
       <div className="map_copyright">
         &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors,
-        Tiles style by <a href="https://www.hotosm.org/" target="_blank" rel="noopener noreferrer" >Humanitarian OpenStreetMap Team</a>
-        hosted by <a href="https://openstreetmap.fr/" target="_blank" rel="noopener noreferrer" >OpenStreetMap France</a>
+        Tiles style by <a href="https://www.hotosm.org/" target="_blank" rel="noopener noreferrer">Humanitarian
+        OpenStreetMap Team</a>
+        hosted by <a href="https://openstreetmap.fr/" target="_blank" rel="noopener noreferrer">OpenStreetMap France</a>
       </div>
     </>
   );
@@ -126,4 +141,4 @@ Map.propTypes = {};
 
 Map.defaultProps = {};
 
-export { Map };
+export {Map};
