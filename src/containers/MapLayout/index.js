@@ -1,1 +1,1 @@
-export MapLayout from "./MapLayout";
+export * from "./MapLayout";
