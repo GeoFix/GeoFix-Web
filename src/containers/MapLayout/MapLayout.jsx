@@ -1,6 +1,11 @@
 import React, { Fragment } from 'react'
+import { Plus } from "react-feather";
+
 import { useBoxes } from "../../hooks/useBoxes";
-import {Map} from "../../components/Map";
+import { RoundButton}  from "../../UIElements/RoundButton";
+import { Map } from "../../components/Map";
+
+import './MapLayout.css'
 
 export function MapLayout() {
   const { isLoading, boxes } = useBoxes();
@@ -10,13 +15,16 @@ export function MapLayout() {
       { isLoading ? (
         <div>Loading...</div>
       ) : (
-        <Map markers={boxes.map(
-          ({ geopoint, id }) => ({
-            lat: geopoint.latitude,
-            long: geopoint.longitude,
-            id,
-          })
-        )} />
+        <Fragment>
+          <Map markers={boxes.map(
+            ({ geopoint, id }) => ({
+              lat: geopoint.latitude,
+              long: geopoint.longitude,
+              id,
+            })
+          )} />
+          <RoundButton icon={<Plus />} />
+        </Fragment>
       )}
     </Fragment>
   )
