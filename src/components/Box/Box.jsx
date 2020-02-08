@@ -9,9 +9,9 @@ const Box = ({boxInformation}) => {
           <div>{boxInformation.code}</div>
         </div>
         <div className="tools">
-          {boxInformation.tools.map(tool => {
-            return (<div>{tool.name}</div>)
-          })}
+          {boxInformation.tools.map((tool, index) => (
+            <div key={`tool-${index}`}>{tool.name}</div>
+          ))}
         </div>
       </div>
     </>
