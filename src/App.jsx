@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { MapLayout } from "./containers/MapLayout";
+import { Create } from "./components/Create";
 
 import './App.css';
 
@@ -12,7 +13,7 @@ export default function App() {
           <MapLayout />
         </Route>
         <Route path="/create">
-          <p>bla</p>
+          <Create />
         </Route>
       </Switch>
     </Router>
