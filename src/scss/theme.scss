@@ -1,0 +1,12 @@
+@import './variables';
+@import './mixins';
+
+:root {
+  --color-default: #000000;
+  --color-background: #FFFFFF;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-default);
+}
