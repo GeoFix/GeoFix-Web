@@ -10,7 +10,7 @@
                     </div>
                     <div class="tools">
                         {boxInformation.tools.map(tool => {
-                            return ( <div>{tool}</div>)
+                            return ( <div>{tool.name}</div>)
                         })}
                     </div>
                 </div>
