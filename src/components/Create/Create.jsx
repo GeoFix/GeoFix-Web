@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react'
 import { useForm } from 'react-hook-form'
-import { InputField } from '../../UIElements/InputField';
+import { Button, ButtonLink, InputField } from '../../UIElements';
+
+import './Create.css'
 
 export function Create() {
   const { register, handleSubmit } = useForm();
@@ -21,7 +23,10 @@ export function Create() {
 
         {/*{errors.exampleRequired && <span>This field is required</span>}*/}
 
-        <input type="submit" />
+        <span className="button-field">
+          <ButtonLink label="Annuler" link="/" />
+          <Button label="Valider" type="submit" />
+        </span>
       </form>
     </Fragment>
   )
