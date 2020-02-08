@@ -19,6 +19,7 @@ import {Vector as VectorLayer} from 'ol/layer';
  */
 const Map = ({markers, onMarkerClick, position}) => {
   const [vectorSource, setVectorSource] = useState();
+  const [map, setMap] = useState();
 
   let mounted = true;
 
@@ -68,9 +69,14 @@ const Map = ({markers, onMarkerClick, position}) => {
       }
 
       const [lat, long] = transform(feature.getGeometry().getCoordinates(), 'EPSG:3857', 'EPSG:4326');
+      const id = feature.get('id');
+
+      if (!id) {
+        return;
+      }
 
       onMarkerClick({
-        id: feature.get('id'),
+        id,
         lat,
         long,
       });
@@ -85,6 +91,8 @@ const Map = ({markers, onMarkerClick, position}) => {
         }
       }
     });
+
+    setMap(map);
 
     return () => {
       mounted = false;
@@ -111,7 +119,7 @@ const Map = ({markers, onMarkerClick, position}) => {
   }, [markers, vectorSource]);
 
   useEffect(() => {
-    if (!position || !vectorSource) {
+    if (!position || !vectorSource || !map) {
       return;
     }
 
@@ -122,7 +130,11 @@ const Map = ({markers, onMarkerClick, position}) => {
     });
 
     vectorSource.addFeature(iconFeature);
-  }, [position, vectorSource]);
+
+    // Center to map
+    let size = map.getSize();
+    map.getView().centerOn(fromLonLat([longitude,latitude]), size, [window.innerWidth / 2, window.innerHeight / 2]);
+  }, [position, vectorSource, map]);
 
   return (
     <>
