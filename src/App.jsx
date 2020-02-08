@@ -14,13 +14,16 @@ function App() {
 
   return (
     <>
-      <Map markers={boxes.map(box => {
-        return {
-          lat: box.geopoint.latitude,
-          long: box.geopoint.longitude,
-          id: box.id,
-        }
-      })} />
+      <Map
+        markers={boxes.map(box => {
+          return {
+            lat: box.geopoint._lat,
+            long: box.geopoint._long,
+            id: box.id,
+          }
+        })}
+        onMarkerClick={box => console.log(box)}
+      />
     </>
   );
 }
