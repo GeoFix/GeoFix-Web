@@ -1,28 +1,32 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+import { Map } from "./components/Map";
+import { useBoxes } from "./hooks/useBoxes";
 
 import './App.css';
 
-import { Map } from "./components/Map/Map";
-import {useBoxes} from "./hooks/useBoxes";
-
-function App() {
-  const {isLoading, boxes} = useBoxes();
+export default function App() {
+  const { isLoading, boxes } = useBoxes();
 
   if (isLoading) {
     return <div>Loading...</div>;
   }
 
   return (
-    <>
-      <Map markers={boxes.map(box => {
-        return {
-          lat: box.geopoint.latitude,
-          long: box.geopoint.longitude,
-          id: box.id,
-        }
-      })} />
-    </>
+    <Router>
+      <Switch>
+        <Route path="/" exact>
+          <Map markers={boxes.map(({ geopoint, id }) => ({
+            lat: geopoint.latitude,
+            long: geopoint.longitude,
+            id,
+          }))} />
+        </Route>
+        <Route path="/create">
+          <p>bla</p>
+        </Route>
+      </Switch>
+    </Router>
   );
 }
-
-export default App;
