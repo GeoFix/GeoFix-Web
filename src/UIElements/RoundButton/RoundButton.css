@@ -1,7 +1,6 @@
 .round-button {
-    background: red;
-    padding: 10px;
     border-radius: 50%;
+    display: flex;
+    padding: 10px;
+    transition: ease all 500ms;
 }
-
-.round-button:hover {}

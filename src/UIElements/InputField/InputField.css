@@ -1,0 +1,16 @@
+label {
+    margin-bottom: 0.5rem;
+}
+
+input, label {
+    display: flex;
+}
+
+input + label {
+    margin-left: .5rem;
+}
+
+.checkbox-input-field {
+    display: flex;
+    align-items: flex-start;
+}
