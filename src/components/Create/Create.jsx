@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import { useForm } from 'react-hook-form'
 
 export function Create() {
-  const { register, handleSubmit, errors } = useForm();
+  const { register, handleSubmit } = useForm();
   const onSubmit = data => { console.log(data) };
 
   return (

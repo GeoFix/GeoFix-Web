@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 
 import firebase from "../utils/firebase";
 
@@ -12,15 +12,12 @@ export const useBoxes = () => {
     const unsubscribe = firebase
       .firestore()
       .collection('/boxes')
-      // .where('cities', 'array-contains', city)
       .onSnapshot((snap) => {
         const boxes = snap.docs
           .map((doc) => ({
             id: doc.id,
             ...doc.data()
           }));
-
-        console.log(boxes);
 
         setBoxes(boxes);
 
