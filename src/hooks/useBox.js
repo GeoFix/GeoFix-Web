@@ -14,12 +14,28 @@ export const useBox = (id) => {
       .doc(`/boxes/${id}`)
       .get()
       .then((doc) => {
-        setBox({
-          id: doc.id,
-          ...doc.data(),
-        });
+        const data = doc.data();
 
-        setIsLoading(false);
+        const promises = data.tools.map((item)=> {
+          return item.tool.get()
+            .then(doc => ({
+              ...doc.data(), 
+              count: item.count,
+            }));
+          });
+
+        Promise
+          .all(promises)
+          .then(
+            tools => {
+              setBox({
+                id: doc.id,
+                ...doc.data(),
+                tools
+              });
+              setIsLoading(false);
+            }
+          )
       }, console.error.bind(console));
   }, [id]);
 
