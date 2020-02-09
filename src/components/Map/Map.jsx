@@ -25,6 +25,10 @@ import pin_toolbox_select from '../../assets/pin_toolbox_select.png';
 import bicycle_rental from '../../assets/bicycle_rental.geojson';
 import bicycle_repair_station from '../../assets/bicycle_repair_station.geojson';
 import store_bicycle from '../../assets/store_bicycle.geojson';
+import Geolocation from 'ol/Geolocation';
+import CircleStyle from "ol/style/Circle";
+import Fill from "ol/style/Fill";
+import Stroke from "ol/style/Stroke";
 
 const iconStyle = new Style({
   image: new Icon({
@@ -138,10 +142,52 @@ const Map = ({markers, onMarkerClick, position, displayLayerStar, displayLayerRe
     });
     // storeVectorLayer.setVisible(false);
 
+    const geolocation = new Geolocation({
+      // enableHighAccuracy must be set to true to have the heading value.
+      trackingOptions: {
+        enableHighAccuracy: true
+      },
+      projection: view.getProjection()
+    });
+
+    geolocation.setTracking(true);
+
+    const accuracyFeature = new Feature();
+
+    const positionFeature = new Feature({
+      style: new Style({
+        image: new CircleStyle({
+          radius: 6,
+          fill: new Fill({
+            color: '#3399CC'
+          }),
+          stroke: new Stroke({
+            color: '#fff',
+            width: 2
+          })
+        })
+      })
+    });
+
+    const positionLayer = new VectorLayer({
+      source: new VectorSource({
+        features: [accuracyFeature, positionFeature],
+      }),
+    });
+
+    geolocation.on('change:position', () => {
+      let coordinates = geolocation.getPosition();
+      positionFeature.setGeometry(coordinates ?
+        new Point(coordinates) : null);
+    });
+    geolocation.on('change:accuracyGeometry', function() {
+      accuracyFeature.setGeometry(geolocation.getAccuracyGeometry());
+    });
+
     //Init map
     const map = new OlMap({
       target: "map",
-      layers: [layer, rentalVectorLayer, repairVectorLayer, storeVectorLayer, boxesLayer],
+      layers: [layer, rentalVectorLayer, repairVectorLayer, storeVectorLayer, boxesLayer, positionLayer],
       view: view
     });
 
@@ -212,24 +258,6 @@ const Map = ({markers, onMarkerClick, position, displayLayerStar, displayLayerRe
 
     // iconFeature.setStyle(this.iconStyle);
   }, [markers, vectorSource]);
-
-  useEffect(() => {
-    if (!position || !vectorSource || !map) {
-      return;
-    }
-
-    const {latitude, longitude} = position.coords;
-
-    let iconFeature = new Feature({
-      geometry: new Point(fromLonLat([longitude, latitude])),
-    });
-
-    vectorSource.addFeature(iconFeature);
-
-    // Center to map
-    let size = map.getSize();
-    map.getView().centerOn(fromLonLat([longitude,latitude]), size, [window.innerWidth / 2, window.innerHeight / 2]);
-  }, [position, vectorSource, map]);
 
   useEffect(() => {
     if (!rentalVectorLayer) {
