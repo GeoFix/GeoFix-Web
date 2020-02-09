@@ -1,6 +1,18 @@
 .round-button {
+    background-color: rgba(0,60,136,0.5);
     border-radius: 50%;
+    color: #fff;
     display: flex;
     padding: 10px;
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
     transition: ease all 500ms;
 }
+
+.round-button:hover {
+    background-color: #fff;
+    color: rgb(0,60,136);
+    transition: ease all 500ms;
+}
+

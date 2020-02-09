@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import classnames from 'classnames'
 
 import './Map.scss';
 import 'ol/ol.css';
@@ -74,12 +75,13 @@ const iconStyleShop= new Style({
 /**
  * Map Component
  */
-const Map = ({markers, onMarkerClick, position, displayLayerStar, displayLayerRepair, displayLayerShop}) => {
+const Map = ({ markers, onMarkerClick, position, className, center, controls, displayLayerStar, displayLayerRepair, displayLayerShop }) => {
   const [vectorSource, setVectorSource] = useState();
   const [rentalVectorLayer, setRentalVectorLayer] = useState();
   const [repairVectorLayer, setRepairVectorLayer] = useState();
   const [storeVectorLayer, setStoreVectorLayer] = useState();
   const [map, setMap] = useState();
+  const mapCenter = center || [-1.6777926, 48.117266];
 
   let mounted = true;
 
@@ -94,7 +96,7 @@ const Map = ({markers, onMarkerClick, position, displayLayerStar, displayLayerRe
     });
 
     let view = new OlView({
-      center: fromLonLat([-1.6777926, 48.117266]),
+      center: fromLonLat(mapCenter),
       zoom: 16
     });
 
@@ -188,7 +190,8 @@ const Map = ({markers, onMarkerClick, position, displayLayerStar, displayLayerRe
     const map = new OlMap({
       target: "map",
       layers: [layer, rentalVectorLayer, repairVectorLayer, storeVectorLayer, boxesLayer, positionLayer],
-      view: view
+      view: view,
+      controls: (controls === false) ? [] : undefined,
     });
 
     let first = true;
@@ -285,7 +288,7 @@ const Map = ({markers, onMarkerClick, position, displayLayerStar, displayLayerRe
 
   return (
     <>
-      <div id="map" className="map"/>
+      <div id="map" className={classnames('map', className)} />
       <div className="map_copyright">
         &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors,
         Tiles style by <a href="https://www.hotosm.org/" target="_blank" rel="noopener noreferrer">Humanitarian
