@@ -25,11 +25,37 @@ export function MapLayout() {
   const [position, error] = useCurrentPosition();
 
   const handleSearch = (values) => {
-    setSearchTools(values.map(item => item.value));
+    if (!values) {
+      return setSearchTools([]);
+    }
+
+    return setSearchTools(values.map(item => item.value));
   };
 
   const openBox = box => {
     history.push(`/boxes/${box.id}`);
+  };
+
+  const renderMap = () => {
+    if (isLoading) {
+      return <SplashScreen image={illustration_search} message="Recherche des boites..." blink/>;
+    }
+
+    if (boxes.length === 0) {
+      return <SplashScreen image={illustration_error} message="Aucune boites à outils aux alentours."/>;
+    }
+
+    return <Map
+      position={position}
+      markers={boxes.map(
+        ({geopoint, id}) => ({
+          lat: geopoint.latitude,
+          long: geopoint.longitude,
+          id,
+        })
+      )}
+      onMarkerClick={openBox}
+    />
   };
 
   if (!position && !error) {
@@ -38,27 +64,8 @@ export function MapLayout() {
 
   return (
     <main className="map-layout">
-      {
-        !isLoading && boxes.length === 0 ? (
-          <SplashScreen image={illustration_error} message="Aucune boites à outils aux alentours."/>
-        ) : (
-          isLoading ? (
-            <SplashScreen image={illustration_search} message="Recherche des boites..." blink/>
-          ) : (
-            <Map
-              position={position}
-              markers={boxes.map(
-                ({geopoint, id}) => ({
-                  lat: geopoint.latitude,
-                  long: geopoint.longitude,
-                  id,
-                })
-              )}
-              onMarkerClick={openBox}
-            />
-          )
-        )
-      }
+      { renderMap() }
+
       <SearchField
         name="tools-search"
         options={tools.map(tool => ({

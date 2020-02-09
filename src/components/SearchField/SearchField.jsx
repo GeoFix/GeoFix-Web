@@ -8,30 +8,19 @@ import './SearchField.scss';
  * SearchField Component
  */
 const SearchField = ({name, options = [], onSearch}) => {
-  const [values, setValues] = useState([]);
-
-  const handleSearch = () => {
-    if (!onSearch) {
-      return;
-    }
-
-    onSearch(values || []);
-  };
 
   return (
-    <div className="search-field">
+    <form className="search-field">
       <Select
         options={options}
-        onChange={setValues}
-        value={values}
+        onChange={onSearch}
         name={name}
         placeholder="Rechercher un outil..."
         className="search-field_input"
         classNamePrefix="react-select"
         isMulti
       />
-      <button onClick={handleSearch} className="search-field_button"><Search className="search-field_icon" /></button>
-    </div>
+    </form>
   );
 };
 
