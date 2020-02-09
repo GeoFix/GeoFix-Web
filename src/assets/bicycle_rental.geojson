@@ -1,0 +1,1419 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-ide",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2020-02-08T21:18:02Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1226405904",
+        "addr:housenumber": "2",
+        "addr:street": "Rue de la Cochardière",
+        "amenity": "bicycle_rental",
+        "capacity": "26",
+        "name": "Hôtel Dieu",
+        "network": "LE vélo STAR",
+        "old_ref": "6",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5506",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.677851,
+          48.117596
+        ]
+      },
+      "id": "node/1226405904"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1226405910",
+        "addr:housenumber": "9",
+        "addr:street": "Avenue Aristide Briand",
+        "amenity": "bicycle_rental",
+        "capacity": "16",
+        "name": "Paul Bert",
+        "network": "LE vélo STAR",
+        "old_ref": "36",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5536",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.670039,
+          48.110115
+        ]
+      },
+      "id": "node/1226405910"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1226405911",
+        "addr:housenumber": "12",
+        "addr:street": "Galerie du Théâtre",
+        "amenity": "bicycle_rental",
+        "capacity": "24",
+        "name": "Mairie",
+        "network": "LE vélo STAR",
+        "old_ref": "2",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5502",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6787575,
+          48.1116088
+        ]
+      },
+      "id": "node/1226405911"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1226405912",
+        "addr:housenumber": "121",
+        "addr:street": "Rue de Fougères",
+        "amenity": "bicycle_rental",
+        "capacity": "16",
+        "level": "0",
+        "name": "Guéhenno - Fougères",
+        "network": "LE vélo STAR",
+        "old_ref": "30",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5530",
+        "source": "Kéolis Rennes (septembre 2018)",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6663678,
+          48.1197982
+        ]
+      },
+      "id": "node/1226405912"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1226405915",
+        "addr:street": "Avenue François Château",
+        "amenity": "bicycle_rental",
+        "capacity": "24",
+        "name": "Plaine de Baud",
+        "network": "LE vélo STAR",
+        "old_ref": "46",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5546",
+        "source": "Kéolis Rennes (septembre 2018)",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6437149,
+          48.1125436
+        ]
+      },
+      "id": "node/1226405915"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1226405919",
+        "addr:housenumber": "83",
+        "addr:street": "Rue de Saint-Malo",
+        "amenity": "bicycle_rental",
+        "capacity": "30",
+        "name": "Auberge de Jeunesse",
+        "network": "LE vélo STAR",
+        "old_ref": "37",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5537",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.681836,
+          48.120857
+        ]
+      },
+      "id": "node/1226405919"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1226405921",
+        "addr:housenumber": "6",
+        "addr:street": "Rue de Brest",
+        "amenity": "bicycle_rental",
+        "capacity": "24",
+        "name": "Horizons",
+        "network": "LE vélo STAR",
+        "old_ref": "27",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5527",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6897484,
+          48.1115465
+        ]
+      },
+      "id": "node/1226405921"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1226405937",
+        "addr:housenumber": "65",
+        "addr:street": "Avenue Aristide Briand",
+        "amenity": "bicycle_rental",
+        "capacity": "20",
+        "name": "Pont de Châteaudun",
+        "network": "LE vélo STAR",
+        "old_ref": "35",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5535",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.664398,
+          48.1102633
+        ]
+      },
+      "id": "node/1226405937"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1226405938",
+        "addr:housenumber": "28",
+        "addr:street": "Boulevard de Metz",
+        "amenity": "bicycle_rental",
+        "capacity": "16",
+        "name": "Metz - Sévigné",
+        "network": "LE vélo STAR",
+        "old_ref": "44",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5544",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6582667,
+          48.1159531
+        ]
+      },
+      "id": "node/1226405938"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1226405945",
+        "addr:housenumber": "2",
+        "addr:street": "Boulevard de Verdun",
+        "amenity": "bicycle_rental",
+        "capacity": "24",
+        "name": "Brest - Verdun",
+        "network": "LE vélo STAR",
+        "old_ref": "34",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5534",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.693273,
+          48.113014
+        ]
+      },
+      "id": "node/1226405945"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1226405949",
+        "addr:housenumber": "1",
+        "addr:street": "Avenue de Cucillé",
+        "amenity": "bicycle_rental",
+        "capacity": "27",
+        "name": "Préfecture",
+        "network": "LE vélo STAR",
+        "old_ref": "55",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5555",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.693916,
+          48.128407
+        ]
+      },
+      "id": "node/1226405949"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1226405953",
+        "addr:housenumber": "20",
+        "addr:street": "Rue du Papier Timbré",
+        "amenity": "bicycle_rental",
+        "capacity": "24",
+        "level": "0",
+        "name": "Cité Judiciaire",
+        "network": "LE vélo STAR",
+        "old_ref": "43",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5543",
+        "source": "Kéolis Rennes (septembre 2018)",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.684119,
+          48.1048118
+        ]
+      },
+      "id": "node/1226405953"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1226405956",
+        "addr:street": "Place Recteur Henri Le Moal",
+        "amenity": "bicycle_rental",
+        "capacity": "26",
+        "name": "Villejean-Université",
+        "network": "LE vélo STAR",
+        "old_ref": "52",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5552",
+        "source": "Kéolis Rennes (septembre 2018)",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.7042335,
+          48.1210768
+        ]
+      },
+      "id": "node/1226405956"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1226405961",
+        "addr:housenumber": "204",
+        "addr:street": "Avenue Général George S. Patton",
+        "amenity": "bicycle_rental",
+        "capacity": "18",
+        "level": "0",
+        "name": "Gros-Chêne",
+        "network": "LE vélo STAR",
+        "old_ref": "78",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5578",
+        "source": "Kéolis Rennes (septembre 2018)",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6650978,
+          48.1268082
+        ]
+      },
+      "id": "node/1226405961"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1226405965",
+        "addr:housenumber": "9",
+        "addr:street": "Rue de Juillet",
+        "amenity": "bicycle_rental",
+        "capacity": "25",
+        "name": "Les Lices",
+        "network": "LE vélo STAR",
+        "old_ref": "26",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5526",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.685036,
+          48.112766
+        ]
+      },
+      "id": "node/1226405965"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1226405974",
+        "addr:housenumber": "109",
+        "addr:street": "Boulevard de Vitré",
+        "amenity": "bicycle_rental",
+        "capacity": "16",
+        "name": "Turmel",
+        "network": "LE vélo STAR",
+        "old_ref": "81",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5581",
+        "source": "Kéolis Rennes (septembre 2018)",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.651089,
+          48.122475
+        ]
+      },
+      "id": "node/1226405974"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1226405978",
+        "addr:housenumber": "46",
+        "addr:street": "Rue Jean Guéhenno",
+        "amenity": "bicycle_rental",
+        "capacity": "26",
+        "level": "0",
+        "name": "Fac de Droit",
+        "network": "LE vélo STAR",
+        "old_ref": "7",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5507",
+        "source": "Kéolis Rennes (septembre 2018)",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6706906,
+          48.1180944
+        ]
+      },
+      "id": "node/1226405978"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1226405988",
+        "addr:housenumber": "32",
+        "addr:street": "Rue de Nemours",
+        "amenity": "bicycle_rental",
+        "capacity": "24",
+        "name": "La Criée",
+        "network": "LE vélo STAR",
+        "old_ref": "21",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5521",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.680066,
+          48.1075811
+        ]
+      },
+      "id": "node/1226405988"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1226405996",
+        "addr:housenumber": "14",
+        "addr:street": "Avenue de Cucillé",
+        "amenity": "bicycle_rental",
+        "capacity": "25",
+        "name": "Cucillé",
+        "network": "LE vélo STAR",
+        "old_ref": "60",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5560",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6980938,
+          48.1287999
+        ]
+      },
+      "id": "node/1226405996"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1226407208",
+        "addr:housenumber": "1",
+        "addr:street": "Avenue Henri Fréville",
+        "amenity": "bicycle_rental",
+        "capacity": "22",
+        "fee": "yes",
+        "name": "Clemenceau",
+        "network": "LE vélo STAR",
+        "old_ref": "62",
+        "operator": "CYKLEO",
+        "operator:type": "public",
+        "payment:credit_cards": "yes",
+        "ref": "5562",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6741091,
+          48.0932744
+        ]
+      },
+      "id": "node/1226407208"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1226407211",
+        "addr:housenumber": "2",
+        "addr:street": "Rue de Redon",
+        "amenity": "bicycle_rental",
+        "capacity": "20",
+        "name": "La Rotonde",
+        "network": "LE vélo STAR",
+        "old_ref": "23",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5523",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6867334,
+          48.1066928
+        ]
+      },
+      "id": "node/1226407211"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1226407213",
+        "addr:housenumber": "12",
+        "addr:street": "Place Hoche",
+        "amenity": "bicycle_rental",
+        "capacity": "39",
+        "name": "Place Hoche",
+        "network": "LE vélo STAR",
+        "old_ref": "4",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5504",
+        "source": "Kéolis Rennes (septembre 2018)",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6770704,
+          48.1150728
+        ]
+      },
+      "id": "node/1226407213"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1226407217",
+        "addr:housenumber": "14",
+        "addr:street": "Rue Louis et René Moine",
+        "amenity": "bicycle_rental",
+        "capacity": "18",
+        "name": "Champs Manceaux",
+        "network": "LE vélo STAR",
+        "old_ref": "69",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5569",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6823243,
+          48.0911583
+        ]
+      },
+      "id": "node/1226407217"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1226407225",
+        "addr:housenumber": "119",
+        "addr:street": "Rue Saint-Hélier",
+        "amenity": "bicycle_rental",
+        "capacity": "20",
+        "name": "Pierre Martin",
+        "network": "LE vélo STAR",
+        "old_ref": "40",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5540",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6621893,
+          48.1031033
+        ]
+      },
+      "id": "node/1226407225"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1226407232",
+        "addr:housenumber": "1",
+        "addr:street": "Avenue Gaston Berger",
+        "amenity": "bicycle_rental",
+        "capacity": "14",
+        "name": "Berger",
+        "network": "LE vélo STAR",
+        "old_ref": "56",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5556",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.705127,
+          48.11629
+        ]
+      },
+      "id": "node/1226407232"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1226407238",
+        "addr:housenumber": "3",
+        "addr:street": "Avenue Jean Janvier",
+        "amenity": "bicycle_rental",
+        "capacity": "16",
+        "name": "Musée Beaux-Arts",
+        "network": "LE vélo STAR",
+        "old_ref": "10",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5510",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.674072,
+          48.109573
+        ]
+      },
+      "id": "node/1226407238"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1226407239",
+        "addr:housenumber": "1",
+        "addr:street": "Square de Kergus",
+        "amenity": "bicycle_rental",
+        "capacity": "28",
+        "name": "TNB",
+        "network": "LE vélo STAR",
+        "old_ref": "12",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5512",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6737148,
+          48.1077551
+        ]
+      },
+      "id": "node/1226407239"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1226407240",
+        "addr:housenumber": "197",
+        "addr:street": "Rue de Fougères",
+        "amenity": "bicycle_rental",
+        "capacity": "18",
+        "name": "Painlevé",
+        "network": "LE vélo STAR",
+        "old_ref": "80",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5580",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6605346,
+          48.1230154
+        ]
+      },
+      "id": "node/1226407240"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1226407242",
+        "addr:housenumber": "211",
+        "addr:street": "Rue de Vern",
+        "amenity": "bicycle_rental",
+        "capacity": "28",
+        "name": "La Poterie",
+        "network": "LE vélo STAR",
+        "old_ref": "82",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5582",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6441279,
+          48.0872775
+        ]
+      },
+      "id": "node/1226407242"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1226407244",
+        "addr:housenumber": "11",
+        "addr:street": "Boulevard René Théophile Hyacinthe Laënnec",
+        "amenity": "bicycle_rental",
+        "capacity": "24",
+        "name": "Laënnec",
+        "network": "LE vélo STAR",
+        "old_ref": "14",
+        "opening_hours": "24/7",
+        "operator": "Star",
+        "payment:credit_cards": "yes",
+        "ref": "5514",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.665814,
+          48.1068478
+        ]
+      },
+      "id": "node/1226407244"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1226407249",
+        "addr:housenumber": "32",
+        "addr:street": "Rue du Docteur Francis Joly",
+        "amenity": "bicycle_rental",
+        "capacity": "20",
+        "name": "Pont de Nantes",
+        "network": "LE vélo STAR",
+        "old_ref": "20",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5520",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6840003,
+          48.1020799
+        ]
+      },
+      "id": "node/1226407249"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1226407251",
+        "addr:street": "Allée de Beaulieu",
+        "amenity": "bicycle_rental",
+        "capacity": "30",
+        "name": "Beaulieu Chimie",
+        "network": "LE vélo STAR",
+        "old_ref": "47",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5547",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6338734,
+          48.11646
+        ]
+      },
+      "id": "node/1226407251"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1226407254",
+        "addr:housenumber": "66",
+        "addr:street": "Mail François Mitterrand",
+        "amenity": "bicycle_rental",
+        "capacity": "28",
+        "name": "Chèques Postaux",
+        "network": "LE vélo STAR",
+        "old_ref": "28",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5528",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6933525,
+          48.1087599
+        ]
+      },
+      "id": "node/1226407254"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1226407256",
+        "addr:housenumber": "21",
+        "addr:street": "Rue Victor Hugo",
+        "amenity": "bicycle_rental",
+        "capacity": "18",
+        "name": "Saint-Georges",
+        "network": "LE vélo STAR",
+        "old_ref": "9",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5509",
+        "source": "Kéolis Rennes (septembre 2018)",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.674417,
+          48.112385
+        ]
+      },
+      "id": "node/1226407256"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1226407260",
+        "addr:housenumber": "1",
+        "addr:street": "Rue du Puits Mauger",
+        "amenity": "bicycle_rental",
+        "capacity": "18",
+        "name": "Plélo Colombier",
+        "network": "LE vélo STAR",
+        "old_ref": "19",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5519",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6804736,
+          48.1061359
+        ]
+      },
+      "id": "node/1226407260"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1226407264",
+        "addr:housenumber": "2",
+        "addr:street": "Cours des Alliés",
+        "amenity": "bicycle_rental",
+        "capacity": "24",
+        "name": "Charles de Gaulle",
+        "network": "LE vélo STAR",
+        "old_ref": "17",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5517",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.677122,
+          48.10511
+        ]
+      },
+      "id": "node/1226407264"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1226407284",
+        "addr:housenumber": "16",
+        "addr:street": "Place Sainte-Anne",
+        "amenity": "bicycle_rental",
+        "capacity": "24",
+        "mapillary": "qFx8dEkVlwnwhApdlCh47A",
+        "name": "Sainte-Anne",
+        "network": "LE vélo STAR",
+        "old_ref": "5",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5505",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6804763,
+          48.1142022
+        ]
+      },
+      "id": "node/1226407284"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1226407291",
+        "addr:housenumber": "4",
+        "addr:street": "Rue Gutenberg",
+        "amenity": "bicycle_rental",
+        "capacity": "28",
+        "name": "Oberthur",
+        "network": "LE vélo STAR",
+        "old_ref": "22",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5522",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6618542,
+          48.1135478
+        ]
+      },
+      "id": "node/1226407291"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1248471514",
+        "addr:city": "Rennes",
+        "addr:housenumber": "155",
+        "addr:postcode": "35000",
+        "addr:street": "Boulevard Jacques Cartier",
+        "amenity": "bicycle_rental",
+        "capacity": "24",
+        "fee": "yes",
+        "name": "Jacques Cartier",
+        "network": "LE vélo STAR",
+        "old_ref": "61",
+        "operator": "CYKLEO",
+        "operator:type": "private",
+        "payment:credit_cards": "yes",
+        "ref": "5561",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6747311,
+          48.0975201
+        ]
+      },
+      "id": "node/1248471514"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1248493011",
+        "addr:housenumber": "7",
+        "addr:street": "Cours des Alliés",
+        "amenity": "bicycle_rental",
+        "capacity": "24",
+        "name": "Champs Libres",
+        "network": "LE vélo STAR",
+        "old_ref": "16",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5516",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.674394,
+          48.10553
+        ]
+      },
+      "id": "node/1248493011"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1248493012",
+        "addr:housenumber": "4",
+        "addr:street": "Boulevard Solférino",
+        "amenity": "bicycle_rental",
+        "capacity": "50",
+        "name": "Gares - Solférino",
+        "network": "LE vélo STAR",
+        "old_ref": "15",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5515",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6711071,
+          48.1041581
+        ]
+      },
+      "id": "node/1248493012"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1248493020",
+        "addr:housenumber": "19",
+        "addr:street": "Quai Lamartine",
+        "amenity": "bicycle_rental",
+        "capacity": "30",
+        "name": "République",
+        "network": "LE vélo STAR",
+        "old_ref": "1",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5501",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6780446,
+          48.1100523
+        ]
+      },
+      "id": "node/1248493020"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1248493022",
+        "addr:housenumber": "24",
+        "addr:street": "Rue André Rouault",
+        "amenity": "bicycle_rental",
+        "capacity": "16",
+        "name": "Binquenais",
+        "network": "LE vélo STAR",
+        "old_ref": "67",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5567",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6673,
+          48.091568
+        ]
+      },
+      "id": "node/1248493022"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1248493023",
+        "addr:housenumber": "76",
+        "addr:street": "Boulevard Emile Combes",
+        "amenity": "bicycle_rental",
+        "capacity": "12",
+        "name": "Sainte-Thérèse",
+        "network": "LE vélo STAR",
+        "old_ref": "71",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5571",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.663705,
+          48.094994
+        ]
+      },
+      "id": "node/1248493023"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1248493024",
+        "addr:housenumber": "37",
+        "addr:street": "Rue Louis Guilloux",
+        "amenity": "bicycle_rental",
+        "capacity": "20",
+        "name": "Marbeuf",
+        "network": "LE vélo STAR",
+        "old_ref": "38",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5538",
+        "source": "Kéolis Rennes (septembre 2018)",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.702033,
+          48.111725
+        ]
+      },
+      "id": "node/1248493024"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1248493026",
+        "addr:housenumber": "3",
+        "addr:street": "Place de Bretagne",
+        "amenity": "bicycle_rental",
+        "capacity": "40",
+        "name": "Place de Bretagne",
+        "network": "LE vélo STAR",
+        "old_ref": "24",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5524",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6841176,
+          48.1096669
+        ]
+      },
+      "id": "node/1248493026"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1248493028",
+        "addr:housenumber": "3",
+        "addr:street": "Avenue du 41ème Régiment d'Infanterie",
+        "amenity": "bicycle_rental",
+        "capacity": "28",
+        "level": "0",
+        "name": "Anatole France",
+        "network": "LE vélo STAR",
+        "old_ref": "33",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5533",
+        "source": "Kéolis Rennes (septembre 2018)",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.686405,
+          48.117985
+        ]
+      },
+      "id": "node/1248493028"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3177398702",
+        "addr:housenumber": "56",
+        "addr:street": "Boulevard Voltaire",
+        "amenity": "bicycle_rental",
+        "capacity": "16",
+        "name": "Voltaire",
+        "network": "LE vélo STAR",
+        "old_ref": "31",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5531",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.698107,
+          48.10524
+        ]
+      },
+      "id": "node/3177398702"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3177398703",
+        "addr:housenumber": "124",
+        "addr:street": "Avenue Sergent Maginot",
+        "amenity": "bicycle_rental",
+        "capacity": "20",
+        "level": "0",
+        "name": "Robidou",
+        "network": "LE vélo STAR",
+        "old_ref": "42",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5542",
+        "source": "Kéolis Rennes (septembre 2018)",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6593876,
+          48.1099172
+        ]
+      },
+      "id": "node/3177398703"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3177398704",
+        "addr:housenumber": "22",
+        "addr:street": "Boulevard de Beaumont",
+        "amenity": "bicycle_rental",
+        "capacity": "24",
+        "name": "Gares - Beaumont",
+        "network": "LE vélo STAR",
+        "old_ref": "84",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5584",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6739801,
+          48.1037881
+        ]
+      },
+      "id": "node/3177398704"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3448395884",
+        "addr:street": "Rue Claude Bernard",
+        "amenity": "bicycle_rental",
+        "capacity": "20",
+        "name": "La Courrouze",
+        "network": "STAR, le vélo",
+        "old_ref": "85",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5585",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6945598,
+          48.0989918
+        ]
+      },
+      "id": "node/3448395884"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4065167491",
+        "addr:street": "Rue de la Taurellerie",
+        "amenity": "bicycle_rental",
+        "capacity": "24",
+        "name": "Armorique",
+        "network": "LE vélo STAR",
+        "old_ref": "86",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5586",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6761837,
+          48.1299297
+        ]
+      },
+      "id": "node/4065167491"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5909747535",
+        "amenity": "bicycle_rental",
+        "capacity": "28",
+        "name": "Pontchaillou Métro",
+        "network": "LE vélo STAR",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5539",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.692737,
+          48.121481
+        ]
+      },
+      "id": "node/5909747535"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5909747536",
+        "addr:housenumber": "92",
+        "addr:street": "Rue Alphonse Guérin",
+        "amenity": "bicycle_rental",
+        "capacity": "20",
+        "name": "Pont de Strasbourg",
+        "network": "LE vélo STAR",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5587",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6559469,
+          48.1098581
+        ]
+      },
+      "id": "node/5909747536"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5909747537",
+        "addr:housenumber": "41",
+        "addr:street": "Avenue des Buttes de Coësmes",
+        "amenity": "bicycle_rental",
+        "capacity": "30",
+        "name": "Beaulieu Restau U",
+        "network": "LE vélo STAR",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes",
+        "ref": "5548",
+        "source": "Kéolis Rennes (septembre 2018)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.638368,
+          48.122048
+        ]
+      },
+      "id": "node/5909747537"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6968700627",
+        "amenity": "bicycle_rental",
+        "capacity": "16",
+        "name": "Turmel",
+        "network": "LE vélo STAR",
+        "operator": "CYKLEO",
+        "payment:credit_cards": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6509017,
+          48.1221195
+        ]
+      },
+      "id": "node/6968700627"
+    }
+  ]
+}
