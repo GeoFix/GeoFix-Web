@@ -70,8 +70,11 @@ const iconStyleShop= new Style({
 /**
  * Map Component
  */
-const Map = ({markers, onMarkerClick, position}) => {
+const Map = ({markers, onMarkerClick, position, displayLayerStar, displayLayerRepair, displayLayerShop}) => {
   const [vectorSource, setVectorSource] = useState();
+  const [rentalVectorLayer, setRentalVectorLayer] = useState();
+  const [repairVectorLayer, setRepairVectorLayer] = useState();
+  const [storeVectorLayer, setStoreVectorLayer] = useState();
   const [map, setMap] = useState();
 
   let mounted = true;
@@ -97,7 +100,7 @@ const Map = ({markers, onMarkerClick, position}) => {
 
     let boxesLayer = new VectorLayer({
       source: vectorSource,
-      style: iconStyle,
+      style: iconStyleSelect,
     });
 
     //VeloStar rental point
@@ -177,6 +180,9 @@ const Map = ({markers, onMarkerClick, position}) => {
 
         if (mounted) {
           setVectorSource(vectorSource);
+          setRentalVectorLayer(rentalVectorLayer);
+          setRepairVectorLayer(repairVectorLayer);
+          setStoreVectorLayer(storeVectorLayer);
         }
       }
     });
@@ -224,6 +230,30 @@ const Map = ({markers, onMarkerClick, position}) => {
     let size = map.getSize();
     map.getView().centerOn(fromLonLat([longitude,latitude]), size, [window.innerWidth / 2, window.innerHeight / 2]);
   }, [position, vectorSource, map]);
+
+  useEffect(() => {
+    if (!rentalVectorLayer) {
+      return;
+    }
+
+    rentalVectorLayer.setVisible(displayLayerStar);
+  }, [displayLayerStar, rentalVectorLayer]);
+
+  useEffect(() => {
+    if (!repairVectorLayer) {
+      return;
+    }
+
+    repairVectorLayer.setVisible(displayLayerRepair);
+  }, [displayLayerRepair, repairVectorLayer]);
+
+  useEffect(() => {
+    if (!storeVectorLayer) {
+      return;
+    }
+
+    storeVectorLayer.setVisible(displayLayerShop);
+  }, [displayLayerShop, storeVectorLayer]);
 
   return (
     <>
