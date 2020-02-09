@@ -4,6 +4,7 @@ import { MapLayout } from "./containers/MapLayout";
 import { Create } from "./components/Create";
 
 import './App.css';
+import BoxLayout from "./containers/BoxLayout/BoxLayout";
 
 export default function App() {
   return (
@@ -14,6 +15,9 @@ export default function App() {
         </Route>
         <Route path="/create">
           <Create />
+        </Route>
+        <Route path="/boxes/:id">
+          <BoxLayout />
         </Route>
       </Switch>
     </Router>
