@@ -3,7 +3,7 @@ import {useEffect, useState} from "react";
 import firebase from "../utils/firebase";
 
 export const useBoxes = (tools) => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [boxes, setBoxes] = useState([]);
 
   useEffect(() => {
