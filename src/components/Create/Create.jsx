@@ -25,13 +25,17 @@ export function Create() {
 
           <InputField label="Nom de la boîte" name="name" inputRef={register({ required: true })} error={errors.name} />
 
+          <p>Position</p>
           <Map
+            className="create-box-map"
             position={position}
-            markers={{
+            markers={[{
               lat: position.coords.latitude,
               long: position.coords.longitude,
               id: '1234',
-            }}
+            }]}
+            center={[position.coords.longitude, position.coords.latitude]}
+            controls={false}
           />
         </fieldset>
 
