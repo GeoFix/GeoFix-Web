@@ -1,6 +1,8 @@
-#map {
-  width: 100vw;
-  height: 100vh;
+.map {
+  .ol-zoom {
+    top: auto;
+    bottom: 40px;
+  }
 }
 
 .map_copyright {
