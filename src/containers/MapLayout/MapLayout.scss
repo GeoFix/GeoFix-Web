@@ -16,4 +16,18 @@
         left: 20px;
         right: 20px;
     }
+
+    .layers {
+        position: absolute;
+        top: 80px;
+        right: 20px;
+    }
+}
+
+.map-layout_open-layer {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 55px;
+    width: 55px;
 }
