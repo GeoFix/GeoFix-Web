@@ -7,7 +7,7 @@
 }
 
 .search-field_input {
-  width: calc(100% - 60px);
+  width: 100%;
 
   .react-select__control {
     border: none;
@@ -19,14 +19,4 @@
   .react-select__indicator-separator {
     display: none;
   }
-}
-
-.search-field_button {
-  width: 60px;
-  background: transparent;
-}
-
-.search-field_icon {
-  width: 18px;
-  height: 18px;
 }
