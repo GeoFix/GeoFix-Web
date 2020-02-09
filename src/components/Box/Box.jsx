@@ -7,7 +7,9 @@ import {InputField} from "../../UIElements/InputField";
 const Box = ({boxInformation,onClose}) => {
   return (
     <>
-      <div className="absoluteCross" onClick={onClose}><img className="cross" src={cross}></img></div>
+      <div className="absoluteCross" onClick={onClose}>
+        <img className="cross" src={cross} alt="Fermer le détail de la boîte" />
+      </div>
       <h1>Boîte {boxInformation.name}</h1>
       <form action="">
         <fieldset>

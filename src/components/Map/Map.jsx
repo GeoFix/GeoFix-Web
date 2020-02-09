@@ -20,7 +20,6 @@ import GeoJSON from 'ol/format/GeoJSON';
 import pin_repair from '../../assets/pin_repair.png';
 import pin_shop from '../../assets/pin_shop.png';
 import pin_star from '../../assets/pin_star.png';
-import pin_toolbox from '../../assets/pin_toolbox.png';
 import pin_toolbox_select from '../../assets/pin_toolbox_select.png';
 
 import bicycle_rental from '../../assets/bicycle_rental.geojson';
@@ -31,14 +30,6 @@ import CircleStyle from "ol/style/Circle";
 import Fill from "ol/style/Fill";
 import Stroke from "ol/style/Stroke";
 
-const iconStyle = new Style({
-  image: new Icon({
-    anchor: [14, 32],
-    anchorXUnits: 'pixels',
-    anchorYUnits: 'pixels',
-    src: pin_toolbox
-  })
-});
 const iconStyleSelect = new Style({
   image: new Icon({
     anchor: [14, 32],
