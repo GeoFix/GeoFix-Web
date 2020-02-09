@@ -1,0 +1,32 @@
+.search-field {
+  display: flex;
+  align-items: stretch;
+  background: white;
+  min-height: 40px;
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, .1);
+}
+
+.search-field_input {
+  width: calc(100% - 60px);
+
+  .react-select__control {
+    border: none;
+    border-radius: 0;
+    height: 100%;
+  }
+
+  .react-select__indicator,
+  .react-select__indicator-separator {
+    display: none;
+  }
+}
+
+.search-field_button {
+  width: 60px;
+  background: transparent;
+}
+
+.search-field_icon {
+  width: 18px;
+  height: 18px;
+}

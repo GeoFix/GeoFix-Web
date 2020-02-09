@@ -1,0 +1,19 @@
+.map-layout {
+    .map {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .round-button {
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .search-field {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        right: 20px;
+    }
+}
