@@ -1,0 +1,307 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-ide",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2020-02-08T22:53:02Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/212392871",
+        "service:bicycle:diy": "yes",
+        "service:bicycle:pump": "yes",
+        "service:bicycle:rental": "yes",
+        "service:bicycle:repair": "yes",
+        "shop": "bicycle",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+		  -1.7033886,
+		  48.1191316
+        ]
+      },
+      "id": "way/212392871"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/212392871",
+        "service:bicycle:diy": "yes",
+        "service:bicycle:pump": "yes",
+        "service:bicycle:rental": "yes",
+        "service:bicycle:repair": "yes",
+        "shop": "bicycle",
+        "wheelchair": "yes",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.7034467,
+          48.1191515
+        ]
+      },
+      "id": "way/212392871"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1684612126",
+        "addr:city": "Rennes",
+        "addr:housenumber": "65",
+        "addr:postcode": "35000",
+        "addr:street": "Avenue Aristide Briand",
+        "contact:email": "rennes@spad.fr",
+        "contact:phone": "+33 2 99 38 46 08",
+        "email": "rennes-spad@cyclable.com",
+        "name": "Cyclable",
+        "opening_hours": "Tu-Sa 10:00-12:30,14:00-19:00",
+        "operator": "Jean-Marc Lesimple",
+        "payment:cash": "yes",
+        "phone": "+33 2 99 38 46 08",
+        "service:bicycle:repair": "yes",
+        "service:bicycle:retail": "yes",
+        "shop": "bicycle",
+        "source:addr": "Rennes Métropole",
+        "source:addr:housenumber:ref": "61321",
+        "source:addr:version": "2016-04-01",
+        "website": "https://rennes-aristide-briand.cyclable.com"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6647652,
+          48.1104007
+        ]
+      },
+      "id": "node/1684612126"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1784936712",
+        "addr:city": "Rennes",
+        "addr:housenumber": "206",
+        "addr:postcode": "35000",
+        "addr:street": "Rue de Saint-Malo",
+        "email": "rennes@cyclable.com",
+        "name": "Cyclable",
+        "opening_hours": "Mo 14:30-19:00; Tu-Sa 09:30-13:00,14:30-19:00",
+        "payment:cash": "yes",
+        "phone": "+33 2 99 13 18 02",
+        "service:bicycle:rental": "yes",
+        "service:bicycle:repair": "yes",
+        "service:bicycle:retail": "yes",
+        "shop": "bicycle",
+        "source:addr": "Rennes Métropole",
+        "source:addr:housenumber:ref": "56644",
+        "source:addr:version": "2016-04-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6842934,
+          48.123204
+        ]
+      },
+      "id": "node/1784936712"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1790570789",
+        "addr:city": "Rennes",
+        "addr:housenumber": "13",
+        "addr:postcode": "35000",
+        "addr:street": "Boulevard Beaumont",
+        "email": "cyclesguedard@wanadoo.fr",
+        "name": "Guédard Cycles",
+        "operator": "Pierre Guédard",
+        "phone": "+33 2 99 30 43 78",
+        "service:bicycle:dealer": "yes",
+        "shop": "bicycle",
+        "source:addr": "Rennes Métropole",
+        "source:addr:housenumber:ref": "65409",
+        "source:addr:version": "2016-04-01",
+        "website": "http://www.cycles-guedard.com",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6757571,
+          48.1037755
+        ]
+      },
+      "id": "node/1790570789"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3615162601",
+        "brand:wikidata": "Q703557",
+        "brand:wikipedia": "fr:Giant (entreprise)",
+        "name": "Giant Rennes",
+        "service:bicycle:repair": "yes",
+        "service:bicycle:retail": "yes",
+        "shop": "bicycle",
+        "website": "http://www.giant-rennes.fr/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6841732,
+          48.1332448
+        ]
+      },
+      "id": "node/3615162601"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5080035484",
+        "name": "La Rustine de Beaulieu",
+        "opening_hours": "We 12:00-14:00, 18:00-20:00, Th 12:30-13:30",
+        "operator": "Ar Vuez",
+        "service:bicycle:diy": "yes",
+        "service:bicycle:pump": "yes",
+        "service:bicycle:rental": "no",
+        "service:bicycle:repair": "no",
+        "service:bicycle:retail": "no",
+        "service:bicycle:second_hand": "no",
+        "service:bicycle:tools": "yes",
+        "shop": "bicycle"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6391707,
+          48.1149526
+        ]
+      },
+      "id": "node/5080035484"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5242242284",
+        "addr:housenumber": "45",
+        "addr:street": "Rue du Puits Mauger",
+        "name": "Maison du Vélo",
+        "office": "association",
+        "opening_hours": "Tu-Sa 13:00-18:00; PH off",
+        "service:bicycle:chain_tool": "yes",
+        "service:bicycle:pump": "yes",
+        "service:bicycle:rental": "yes",
+        "shop": "bicycle"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6836366,
+          48.1054561
+        ]
+      },
+      "id": "node/5242242284"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5296114354",
+        "addr:city": "Rennes",
+        "addr:housenumber": "16",
+        "addr:postcode": "35000",
+        "addr:street": "Rue Saint-Louis",
+        "name": "L'échoppe du 2 Roues",
+        "opening_hours": "Tu-Fr 10:00-12:30,14:00-19:00; Sa 10:00-13:00,14:30-18:00",
+        "phone": "+33 2 23 46 30 01",
+        "service:bicycle:rental": "yes",
+        "service:bicycle:repair": "yes",
+        "service:bicycle:retail": "yes",
+        "shop": "bicycle",
+        "website": "https://www.lechoppedu2roues.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6828251,
+          48.1138301
+        ]
+      },
+      "id": "node/5296114354"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5904027177",
+        "addr:housenumber": "28",
+        "addr:street": "square Henry Dunant",
+        "description": "Atelier de réparation / vente de vélos électriques et moteurs pour vélos",
+        "mobile": "+33 7 69 61 93 34",
+        "name": "Cycle Futur",
+        "phone": "+33 2 90 02 56 42",
+        "shop": "bicycle",
+        "website": "https://www.cyclefutur.fr/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6569507,
+          48.1315361
+        ]
+      },
+      "id": "node/5904027177"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6240181744",
+        "addr:city": "Rennes",
+        "addr:housenumber": "20",
+        "addr:postcode": "35000",
+        "addr:street": "Rue Chicogné",
+        "contact:email": "petiterennes@gmail.com",
+        "contact:facebook": "https://www.facebook.com/lapetiterennes/",
+        "contact:instagram": "https://www.instagram.com/lapetiterennes/",
+        "contact:phone": "+33984363109",
+        "contact:twitter": "https://twitter.com/lapetiterennes",
+        "contact:website": "http://lapetiterennes.org/",
+        "name": "La Petite Rennes",
+        "opening_hours": "Tu 14:00-17:30; We-Sa 14:00-19:00, We[3] 19:00-22:00 open \"for women, trans, intersex, or self-identifying persons other than as a cisgender man\"; We[1],We[-1] 14:00-22:00",
+        "service:bicycle:diy": "yes",
+        "service:bicycle:retail": "yes",
+        "service:bicycle:second_hand": "yes",
+        "shop": "bicycle",
+        "source:opening_hours": "website"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6841373,
+          48.1070602
+        ]
+      },
+      "id": "node/6240181744"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6355081708",
+        "name": "Bicycle Times",
+        "service:bicycle:repair": "yes",
+        "shop": "bicycle",
+        "website": "https://bicycletimes48.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6840337,
+          48.1175815
+        ]
+      },
+      "id": "node/6355081708"
+    }
+  ]
+}

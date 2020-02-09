@@ -1,5 +1,5 @@
 import React, {Fragment, useState} from 'react'
-import {Plus} from "react-feather";
+import {Plus, Layers as LayersIcon} from "react-feather";
 import {useCurrentPosition} from "react-use-geolocation";
 import {useHistory} from "react-router-dom";
 
@@ -9,6 +9,7 @@ import {RoundButton} from "../../UIElements/RoundButton";
 import {Map} from "../../components/Map";
 import {SplashScreen} from "../../components/SplashScreen/SplashScreen";
 import SearchField from "../../components/SearchField/SearchField";
+import Layers from "../../components/Layers/Layers";
 
 import './MapLayout.scss'
 
@@ -18,6 +19,13 @@ import illustration_search from '../../assets/undraw_searching_p5ux.svg';
 
 export function MapLayout() {
   const [searchTools, setSearchTools] = useState([]);
+  const [layers, setLayers] = useState({
+    star: true,
+    repair: true,
+    retail: true,
+  });
+  const [layersOpen, setLayerOpen] = useState(false);
+
   const {isLoading, boxes} = useBoxes(searchTools);
   const {tools} = useTools();
   const history = useHistory();
@@ -55,6 +63,9 @@ export function MapLayout() {
         })
       )}
       onMarkerClick={openBox}
+      displayLayerStar={layers.star}
+      displayLayerRepair={layers.repair}
+      displayLayerShop={layers.retail}
     />
   };
 
@@ -74,6 +85,10 @@ export function MapLayout() {
         }))}
         onSearch={handleSearch}
       />
+
+      <button className="map-layout_open-layer" onClick={() => setLayerOpen(!layersOpen)}><LayersIcon /></button>
+      {layersOpen && <Layers layers={layers} onLayersChange={setLayers} />}
+
       <RoundButton icon={<Plus/>}/>
     </main>
   )
