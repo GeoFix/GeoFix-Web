@@ -13,12 +13,68 @@ import Feature from 'ol/Feature';
 import {fromLonLat, transform} from 'ol/proj';
 import VectorSource from 'ol/source/Vector';
 import {Vector as VectorLayer} from 'ol/layer';
+import {Icon, Style} from 'ol/style';
+import GeoJSON from 'ol/format/GeoJSON';
+
+import pin_repair from '../../assets/pin_repair.png';
+import pin_shop from '../../assets/pin_shop.png';
+import pin_star from '../../assets/pin_star.png';
+import pin_toolbox from '../../assets/pin_toolbox.png';
+import pin_toolbox_select from '../../assets/pin_toolbox_select.png';
+
+import bicycle_rental from '../../assets/bicycle_rental.geojson';
+import bicycle_repair_station from '../../assets/bicycle_repair_station.geojson';
+import store_bicycle from '../../assets/store_bicycle.geojson';
+
+const iconStyle = new Style({
+  image: new Icon({
+    anchor: [14, 32],
+    anchorXUnits: 'pixels',
+    anchorYUnits: 'pixels',
+    src: pin_toolbox
+  })
+});
+const iconStyleSelect = new Style({
+  image: new Icon({
+    anchor: [14, 32],
+    anchorXUnits: 'pixels',
+    anchorYUnits: 'pixels',
+    src: pin_toolbox_select
+  })
+});
+const iconStyleRepair= new Style({
+  image: new Icon({
+    anchor: [14, 32],
+    anchorXUnits: 'pixels',
+    anchorYUnits: 'pixels',
+    src: pin_repair
+  })
+});
+const iconStyleStar= new Style({
+  image: new Icon({
+    anchor: [14, 32],
+    anchorXUnits: 'pixels',
+    anchorYUnits: 'pixels',
+    src: pin_star
+  })
+});
+const iconStyleShop= new Style({
+  image: new Icon({
+    anchor: [14, 32],
+    anchorXUnits: 'pixels',
+    anchorYUnits: 'pixels',
+    src: pin_shop
+  })
+});
 
 /**
  * Map Component
  */
-const Map = ({markers, onMarkerClick, position}) => {
+const Map = ({markers, onMarkerClick, position, displayLayerStar, displayLayerRepair, displayLayerShop}) => {
   const [vectorSource, setVectorSource] = useState();
+  const [rentalVectorLayer, setRentalVectorLayer] = useState();
+  const [repairVectorLayer, setRepairVectorLayer] = useState();
+  const [storeVectorLayer, setStoreVectorLayer] = useState();
   const [map, setMap] = useState();
 
   let mounted = true;
@@ -35,21 +91,57 @@ const Map = ({markers, onMarkerClick, position}) => {
 
     let view = new OlView({
       center: fromLonLat([-1.6777926, 48.117266]),
-      zoom: 13
+      zoom: 16
     });
 
     let vectorSource = new VectorSource(/*{
       features: [iconFeature]
     }*/);
 
-    let newPinLayer = new VectorLayer({
-      source: vectorSource
+    let boxesLayer = new VectorLayer({
+      source: vectorSource,
+      style: iconStyleSelect,
     });
+
+    //VeloStar rental point
+    const rentalSource = new VectorSource({
+      url: bicycle_rental,
+      format: new GeoJSON()
+    });
+
+    const rentalVectorLayer = new VectorLayer({
+      source: rentalSource,
+      style: iconStyleStar
+    });
+
+    // rentalVectorLayer.setVisible(false);
+    //Repair points
+    let repairSource = new VectorSource({
+      url: bicycle_repair_station,
+      format: new GeoJSON()
+    });
+
+    const repairVectorLayer = new VectorLayer({
+      source: repairSource,
+      style: iconStyleRepair
+    });
+
+    // repairVectorLayer.setVisible(false);
+    //Store points
+    let storeSource = new VectorSource({
+      url: store_bicycle,
+      format: new GeoJSON()
+    });
+    const storeVectorLayer = new VectorLayer({
+      source: storeSource,
+      style: iconStyleShop
+    });
+    // storeVectorLayer.setVisible(false);
 
     //Init map
     const map = new OlMap({
       target: "map",
-      layers: [layer, newPinLayer],
+      layers: [layer, rentalVectorLayer, repairVectorLayer, storeVectorLayer, boxesLayer],
       view: view
     });
 
@@ -88,6 +180,9 @@ const Map = ({markers, onMarkerClick, position}) => {
 
         if (mounted) {
           setVectorSource(vectorSource);
+          setRentalVectorLayer(rentalVectorLayer);
+          setRepairVectorLayer(repairVectorLayer);
+          setStoreVectorLayer(storeVectorLayer);
         }
       }
     });
@@ -135,6 +230,30 @@ const Map = ({markers, onMarkerClick, position}) => {
     let size = map.getSize();
     map.getView().centerOn(fromLonLat([longitude,latitude]), size, [window.innerWidth / 2, window.innerHeight / 2]);
   }, [position, vectorSource, map]);
+
+  useEffect(() => {
+    if (!rentalVectorLayer) {
+      return;
+    }
+
+    rentalVectorLayer.setVisible(displayLayerStar);
+  }, [displayLayerStar, rentalVectorLayer]);
+
+  useEffect(() => {
+    if (!repairVectorLayer) {
+      return;
+    }
+
+    repairVectorLayer.setVisible(displayLayerRepair);
+  }, [displayLayerRepair, repairVectorLayer]);
+
+  useEffect(() => {
+    if (!storeVectorLayer) {
+      return;
+    }
+
+    storeVectorLayer.setVisible(displayLayerShop);
+  }, [displayLayerShop, storeVectorLayer]);
 
   return (
     <>
