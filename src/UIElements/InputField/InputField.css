@@ -12,15 +12,22 @@ input + label {
 
 input {
     border: 1px solid #ccc;
+    font-family: 'Courier Prime', sans-serif;
 }
 
 input[type='text'] {
    padding: .5rem .7rem;
 }
 
-.checkbox-input-field {
+input[type='number'] {
+    margin-right: .5rem;
+    max-width: 15%;
+}
+
+.label-right-input-field {
+    align-items: baseline;
     display: flex;
-    align-items: flex-start;
+    margin-bottom: .5rem;
 }
 
 .input-error {
