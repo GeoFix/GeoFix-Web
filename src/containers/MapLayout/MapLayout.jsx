@@ -30,8 +30,6 @@ export function MapLayout() {
   const {tools} = useTools();
   const history = useHistory();
 
-  const [position, error] = useCurrentPosition();
-
   const handleSearch = (values) => {
     if (!values) {
       return setSearchTools([]);
@@ -54,7 +52,6 @@ export function MapLayout() {
     }
 
     return <Map
-      position={position}
       markers={boxes.map(
         ({geopoint, id}) => ({
           lat: geopoint.latitude,
@@ -68,10 +65,6 @@ export function MapLayout() {
       displayLayerShop={layers.retail}
     />
   };
-
-  if (!position && !error) {
-    return <SplashScreen image={illustration_localisation} message="Localisation en cours..." blink/>;
-  }
 
   return (
     <main className="map-layout">
