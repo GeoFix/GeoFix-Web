@@ -1,6 +1,6 @@
-import React, {Fragment, useState} from 'react'
+import React, { useState } from 'react'
 import {Plus} from "react-feather";
-import {useCurrentPosition} from "react-use-geolocation";
+// import {useCurrentPosition} from "react-use-geolocation";
 import {useHistory} from "react-router-dom";
 
 import {useBoxes} from "../../hooks/useBoxes";
@@ -22,7 +22,14 @@ export function MapLayout() {
   const {tools} = useTools();
   const history = useHistory();
 
-  const [position, error] = useCurrentPosition();
+  // const [position, error] = useCurrentPosition();
+  const error = false;
+  const position = {
+    coords: {
+      latitude: 48.110182,
+      longitude: -1.678994,
+    }
+  };
 
   const handleSearch = (values) => {
     if (!values) {
