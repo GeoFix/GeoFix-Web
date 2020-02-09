@@ -6,7 +6,7 @@ import './InputField.css'
 export function InputField ({ error, inputRef, label, name, required, type }) {
   const isCheckbox = type === 'checkbox';
   const labelField = label ? <label htmlFor={name}>{label}{required ? ' *' : ''}</label> : '';
-console.log(error)
+
   return (
     <div className={`${isCheckbox ? 'checkbox-' : ''}input-field`}>
       { !isCheckbox && labelField }
