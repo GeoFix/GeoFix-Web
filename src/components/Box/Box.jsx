@@ -2,11 +2,11 @@ import React from 'react';
 import './Box.scss';
 import cross from '../../assets/cross.svg';
 
-const Box = ({boxInformation}) => {
+const Box = ({boxInformation,onClose}) => {
   return (
     <>
       <div className="toolsContent">
-        <div className="absoluteCross"><img className="cross" src={cross}></img></div>
+        <div className="absoluteCross" onClick={onClose}><img className="cross" src={cross}></img></div>
         <div className="code">
           <h2>Code:</h2>
           <div>{boxInformation.code}</div>
