@@ -15,7 +15,7 @@ const SearchField = ({name, options = [], onSearch}) => {
       return;
     }
 
-    onSearch(values);
+    onSearch(values || []);
   };
 
   return (
