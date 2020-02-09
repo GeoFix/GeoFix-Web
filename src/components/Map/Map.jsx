@@ -189,7 +189,7 @@ const Map = ({ markers, onMarkerClick, position, className, center, controls, di
     //Init map
     const map = new OlMap({
       target: "map",
-      layers: [layer, rentalVectorLayer, repairVectorLayer, storeVectorLayer, boxesLayer, positionLayer],
+      layers: [layer, positionLayer, rentalVectorLayer, repairVectorLayer, storeVectorLayer, boxesLayer],
       view: view,
       controls: (controls === false) ? [] : undefined,
     });
