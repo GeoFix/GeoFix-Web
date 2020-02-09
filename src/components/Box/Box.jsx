@@ -5,11 +5,10 @@ import {Map} from "../Map";
 import {InputField} from "../../UIElements/InputField";
 
 const Box = ({boxInformation,onClose}) => {
-  console.log(boxInformation)
   return (
     <>
       <div className="absoluteCross" onClick={onClose}><img className="cross" src={cross}></img></div>
-      <h1>Boîte</h1>
+      <h1>Boîte {boxInformation.name}</h1>
       <form action="">
         <fieldset>
           <legend>Informations</legend>
