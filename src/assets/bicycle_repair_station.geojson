@@ -1,0 +1,246 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-ide",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2020-02-08T21:20:02Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4837658846",
+        "amenity": "bicycle_repair_station",
+        "fee": "no",
+        "indoor": "no",
+        "opening_hours": "24/7",
+        "service:bicycle:pump": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6777097,
+          48.1054176
+        ]
+      },
+      "id": "node/4837658846"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4979639280",
+        "amenity": "bicycle_repair_station",
+        "compressed_air": "yes",
+        "fee": "no",
+        "service:bicycle:pump": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6732351,
+          48.1041963
+        ]
+      },
+      "id": "node/4979639280"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5100015040",
+        "amenity": "bicycle_repair_station",
+        "fee": "no",
+        "indoor": "no",
+        "opening_hours": "24/7",
+        "service:bicycle:pump": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6803292,
+          48.110115
+        ]
+      },
+      "id": "node/5100015040"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5100028420",
+        "access": "yes",
+        "amenity": "bicycle_repair_station",
+        "compressed_air": "yes",
+        "fee": "no",
+        "service:bicycle:pump": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6749123,
+          48.08748
+        ]
+      },
+      "id": "node/5100028420"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5216487066",
+        "amenity": "bicycle_repair_station",
+        "fee": "no",
+        "indoor": "no",
+        "opening_hours": "24/7",
+        "service:bicycle:pump": "yes",
+        "source": "https://twitter.com/RennesTravaux/status/927929710583181313"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.683641,
+          48.1055235
+        ]
+      },
+      "id": "node/5216487066"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5754597950",
+        "amenity": "bicycle_repair_station",
+        "fee": "no",
+        "opening_hours": "24/7",
+        "service:bicycle:pump": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.7095715,
+          48.1077562
+        ]
+      },
+      "id": "node/5754597950"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5884887116",
+        "amenity": "bicycle_repair_station",
+        "service:bicycle:pump": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6498556,
+          48.1002416
+        ]
+      },
+      "id": "node/5884887116"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5891745085",
+        "amenity": "bicycle_repair_station",
+        "fee": "no",
+        "service:bicycle:pump": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6414823,
+          48.1128545
+        ]
+      },
+      "id": "node/5891745085"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5927095217",
+        "amenity": "bicycle_repair_station",
+        "fee": "no",
+        "opening_hours": "24/7",
+        "service:bicycle:pump": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6749363,
+          48.0972277
+        ]
+      },
+      "id": "node/5927095217"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6048926254",
+        "amenity": "bicycle_repair_station",
+        "fee": "no",
+        "operator": "Ville de Rennes",
+        "service:bicycle:pump": "yes",
+        "service:bicycle:tools": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6814909,
+          48.1212196
+        ]
+      },
+      "id": "node/6048926254"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6068489408",
+        "amenity": "bicycle_repair_station",
+        "operator": "Ville de Rennes",
+        "service:bicycle:chain_tool": "no",
+        "service:bicycle:pump": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.663854,
+          48.128657
+        ]
+      },
+      "id": "node/6068489408"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6124935612",
+        "amenity": "bicycle_repair_station",
+        "fee": "no",
+        "opening_hours": "24/7",
+        "service:bicycle:pump": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6562573,
+          48.1098248
+        ]
+      },
+      "id": "node/6124935612"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6239761160",
+        "amenity": "bicycle_repair_station",
+        "fee": "no",
+        "indoor": "no",
+        "opening_hours": "24/7",
+        "service:bicycle:pump": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6945805,
+          48.0989172
+        ]
+      },
+      "id": "node/6239761160"
+    }
+  ]
+}
