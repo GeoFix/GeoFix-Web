@@ -3,16 +3,17 @@ import { bool, func, string } from 'prop-types'
 
 import './InputField.css'
 
-export function InputField ({ inputRef, label, name, required, type }) {
+export function InputField ({ error, inputRef, label, name, required, type }) {
   const isCheckbox = type === 'checkbox';
-  const labelField = label ? <label htmlFor={name}>{label}</label> : '';
-
+  const labelField = label ? <label htmlFor={name}>{label}{required ? ' *' : ''}</label> : '';
+console.log(error)
   return (
-    <span className={`${isCheckbox ? 'checkbox-' : ''}input-field`}>
+    <div className={`${isCheckbox ? 'checkbox-' : ''}input-field`}>
       { !isCheckbox && labelField }
       <input type={type} required={required} ref={inputRef} name={name} />
       { isCheckbox && labelField }
-    </span>
+      {error && <span className="input-error">This field is required</span>}
+    </div>
   )
 }
 

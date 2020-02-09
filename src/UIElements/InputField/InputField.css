@@ -10,7 +10,22 @@ input + label {
     margin-left: .5rem;
 }
 
+input {
+    border: 1px solid #ccc;
+}
+
+input[type='text'] {
+   padding: .5rem .7rem;
+}
+
 .checkbox-input-field {
     display: flex;
     align-items: flex-start;
+}
+
+.input-error {
+    color: darkred;
+    display: flex;
+    font-size: 90%;
+    margin-top: .5rem;
 }
