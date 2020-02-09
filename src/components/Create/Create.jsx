@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, {Fragment, useState} from 'react'
 import { useForm } from 'react-hook-form'
 import { useHistory } from "react-router-dom";
 import firebase from "../../utils/firebase";
@@ -8,10 +8,14 @@ import { createBox } from "../../hooks/createBox";
 import { Map } from "../Map";
 
 import './Create.css'
+import {SplashScreen} from "../SplashScreen/SplashScreen";
+
+import illustration_creation from '../../assets/undraw_creation_rd0e.svg';
 
 export function Create() {
+  const [isLoading, setIsLoading] = useState(false);
   const { register, handleSubmit, errors } = useForm();
-  const { tools, isLoading } = useTools();
+  const { tools } = useTools();
   const history = useHistory();
 
   const position = {
@@ -22,6 +26,7 @@ export function Create() {
   };
 
   const onSubmit = data => {
+    setIsLoading(true);
     const newTools = tools.map(({ id }) => (
       {
         tool: firebase.firestore().collection('tools').doc(id),
@@ -29,9 +34,14 @@ export function Create() {
       }
     ));
 
-    createBox({ name: data.name, tools: newTools })
-    history.push('/')
+    createBox({ name: data.name, tools: newTools }).then(() => {
+      history.push('/')
+    });
   };
+
+  if (isLoading) {
+    return <SplashScreen image={illustration_creation} message="Ajout de la boite..." blink />
+  }
 
   return (
     <Fragment>
