@@ -3,7 +3,7 @@ import { bool, func, string } from 'prop-types'
 
 import './InputField.css'
 
-export function InputField ({ error, inputRef, label, name, required, type, defaultValue }) {
+export function InputField ({ error, inputRef, label, name, required, type, defaultValue, disabled }) {
   const labelAtRight = type === 'checkbox' || type === 'number';
   const labelField = label ? <label htmlFor={name}>{label}{required ? ' *' : ''}</label> : '';
 
@@ -16,6 +16,7 @@ export function InputField ({ error, inputRef, label, name, required, type, defa
         ref={inputRef}
         name={name}
         defaultValue={defaultValue}
+        disabled={disabled}
         min={type === 'number' ? 0 : null}
       />
       { labelAtRight && labelField }
