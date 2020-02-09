@@ -1,6 +1,5 @@
-import React, {Fragment, useState} from 'react'
+import React, {useState} from 'react'
 import {Plus, Layers as LayersIcon} from "react-feather";
-import {useCurrentPosition} from "react-use-geolocation";
 import {useHistory} from "react-router-dom";
 
 import {useBoxes} from "../../hooks/useBoxes";
@@ -13,7 +12,6 @@ import Layers from "../../components/Layers/Layers";
 
 import './MapLayout.scss'
 
-import illustration_localisation from '../../assets/undraw_location_search_bqps.svg';
 import illustration_error from '../../assets/undraw_cancel_u1it.svg';
 import illustration_search from '../../assets/undraw_searching_p5ux.svg';
 
