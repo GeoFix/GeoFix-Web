@@ -3,6 +3,7 @@ import './Box.scss';
 import cross from '../../assets/cross.svg';
 
 const Box = ({boxInformation,onClose}) => {
+  console.log(boxInformation)
   return (
     <>
       <div className="toolsContent">
@@ -12,9 +13,12 @@ const Box = ({boxInformation,onClose}) => {
           <div>{boxInformation.code}</div>
         </div>
         <div className="tools">
-          {boxInformation.tools.map((tool, index) => (
-            <div key={`tool-${index}`}><p>Tool icon: {tool.icon}</p><p>Tool: {tool.name}</p></div>
-          ))}
+          {boxInformation.tools.map((tool, index) => {
+            return (
+            <div key={`tool-${index}`}>
+              {/*<p>Tool icon: {tool.icon}</p>*/}
+              <p> {tool.name}: {tool.count}</p></div>
+          )})}
         </div>
       </div>
     </>
