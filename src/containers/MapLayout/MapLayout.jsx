@@ -14,6 +14,7 @@ import './MapLayout.scss'
 
 import illustration_localisation from '../../assets/undraw_location_search_bqps.svg';
 import illustration_error from '../../assets/undraw_cancel_u1it.svg';
+import illustration_search from '../../assets/undraw_searching_p5ux.svg';
 
 export function MapLayout() {
   const [searchTools, setSearchTools] = useState([]);
@@ -32,7 +33,7 @@ export function MapLayout() {
   };
 
   if (!position && !error) {
-    return <SplashScreen image={illustration_localisation} message="Localisation en cours..." blink />;
+    return <SplashScreen image={illustration_localisation} message="Localisation en cours..." blink/>;
   }
 
   return (
@@ -41,17 +42,21 @@ export function MapLayout() {
         !isLoading && boxes.length === 0 ? (
           <SplashScreen image={illustration_error} message="Aucune boites à outils aux alentours."/>
         ) : (
-          <Map
-            position={position}
-            markers={boxes.map(
-              ({geopoint, id}) => ({
-                lat: geopoint.latitude,
-                long: geopoint.longitude,
-                id,
-              })
-            )}
-            onMarkerClick={openBox}
-          />
+          isLoading ? (
+            <SplashScreen image={illustration_search} message="Recherche des boites..." blink/>
+          ) : (
+            <Map
+              position={position}
+              markers={boxes.map(
+                ({geopoint, id}) => ({
+                  lat: geopoint.latitude,
+                  long: geopoint.longitude,
+                  id,
+                })
+              )}
+              onMarkerClick={openBox}
+            />
+          )
         )
       }
       <SearchField
