@@ -34,8 +34,8 @@ To discover more about Geocaching philosophy : [Wikipedia](https://en.wikipedia.
 - ✨ [The GeoFix Project](#-the-geofix-project)
 - 🚀 [Quick Start](#-quick-start)
 - 💫 [Deploy](#-deploy)
-- ⚙ [Available Scripts](#-available-scripts)
-- ‍💻 [Authors](#-authors)
+- ⚙️ [Available Scripts](#-available-scripts)
+- 💻 [Authors](#-authors)
 - 📝 [Licence](#-license)
 
 ## 🚀 Quick Start
