@@ -10,7 +10,7 @@
 
 <p align="center">
   Who has never ended up with a punctured wheel, forced to return on foot?<br>
-  See the Prototype : <a href="https://geofix-4e08e.firebaseapp.com/">
+  See the Prototype : <a href="https://geofix-4e08e.firebaseapp.com/" target="_blank">
     https://geofix-4e08e.firebaseapp.com/
   </a>
 </p>
