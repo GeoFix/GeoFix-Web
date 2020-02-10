@@ -11,6 +11,9 @@
 # production
 /build
 
+# configuration
+.env
+
 # misc
 .DS_Store
 .env.local
@@ -23,3 +26,4 @@ yarn-debug.log*
 yarn-error.log*
 
 .idea
+.firebase
