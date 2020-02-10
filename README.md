@@ -20,7 +20,7 @@
     <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License" />
   </a>
   <a href="https://github.com/GeoFix/GeoFix-Web/actions">
-    <img src="https://img.shields.io/github/workflow/status/GeoFix/GeoFix-Web/Deploy%20to%20Firebase?label=Deployment" />
+    <img src="https://img.shields.io/github/workflow/status/GeoFix/GeoFix-Web/deploy?label=Deployment" />
   </a>
 </p>
 
