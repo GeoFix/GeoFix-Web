@@ -1,0 +1,8 @@
+.button-field {
+    display: flex;
+    justify-content: space-between;
+}
+
+.map-container {
+    position: relative;
+}

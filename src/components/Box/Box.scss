@@ -1,0 +1,26 @@
+.toolsContent{
+    border: 1px solid black;
+    padding : 1em;
+    width: fit-content;
+    position: relative;
+}
+
+.absoluteCross{
+    position: absolute;
+    right: 0.5em;
+    top:0.5em;
+}
+
+.cross{
+    width:10px;
+}
+
+.code {
+    padding: 1em;
+}
+
+
+.tools>div>p {
+    display:inline-block;
+    padding : 1em;
+}

@@ -1,0 +1,15 @@
+button {
+    background-color: #000;
+    border: 2px solid #000;
+    color: #fff;
+    font-family: 'Courier Prime', sans-serif;
+    padding: .7rem .8rem;
+    transition: ease all 500ms;
+}
+
+button:hover {
+    background-color: #fff;
+    border: 2px solid #000;
+    color: #000;
+    transition: ease all 500ms;
+}
