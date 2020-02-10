@@ -1,4 +1,24 @@
-# GeoFix
+<p align="center">
+  <a href="https://github.com/GeoFix/GeoFix-Web">
+    <img alt="GeoFix" src="./public/logo512.png" width="60" />
+  </a>
+</p>
+
+<h1 align="center">
+  GeoFix
+</h1>
+
+<p align="center">
+  Who has never ended up with a punctured wheel, forced to return on foot?
+</p>
+
+<p align="center">
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License" />
+  </a>
+</p>
+
+## ✨ The GeoFix Project
 
 This project uses geocaching philosophy to make available fixing tools for bicycles.
 
@@ -6,15 +26,77 @@ The goal ? To hide and boxes with tiny and useful tools, and provide an app to r
 
 To discover more about Geocaching philosophy : [Wikipedia](https://en.wikipedia.org/wiki/Geocaching)
 
-## Getting started
+## Table of contents
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and stored with Firebase.
+- ✨ [The GeoFix Project](#-the-geofix-project)
+- 🚀 [Quick Start](#-quick-start)
+- 💫 [Deploy](#-deploy)
+- ⚙ [Available Scripts](#-available-scripts)
+- ‍💻 [Authors](#-authors)
+- 📝 [Licence](#-license)
 
-The made is coming from OpenStreetMap.
+## 🚀 Quick Start
 
-To start the app, just run `yarn`.
+1. Clone the project
 
-## Available Scripts
+    ```bash
+    $ git clone https://github.com/GeoFix/GeoFix-Web.git GeoFix
+    $ cd GeoFix
+    ```
+
+1. Install dependencies
+
+    ```bash
+    $ yarn install
+    ```
+
+1. Start your app
+
+    ```bash
+    $ yarn start
+    ```
+
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
+
+## 💫 Deploy
+
+This application is provided by [Firebase](https://firebase.google.com/)
+
+1. Install Firebase CLI
+
+   ```
+   $ npm install -g firebase-tools
+   ```
+   
+1. Login into Firebase Console
+
+   ```
+   $ firebase login
+   ```
+   
+1. Initialize Firebase Hosting
+
+   ```
+   $ firebase init
+   ```
+
+1. Build application
+
+   ```
+   $ yarn build
+   ```
+
+1. Deploy application
+
+   ```
+   $ firebase deploy
+   ```
+
+## ⚙️ Available Scripts
 
 In the project directory, you can run:
 
@@ -26,14 +108,17 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-## Authors
+### `yarn build`
 
-- Quentin Machard
+Build application in production mode into `/build` folder
+
+## ‍💻 Authors
+
+- Quentin Machard [@qmachard](https://github.com/qmachard)
+- Mireille Campourcy - [@mcampourcy](https://github.com/mcampourcy)
 - Arnaud Jolly
 - Charles Hardy
-- Mireille Campourcy
 
-## License
+## 📝 License
 
 This project is licensed under the MIT License - see the LICENSE.md file for details
-
