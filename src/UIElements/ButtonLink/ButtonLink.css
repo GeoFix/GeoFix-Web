@@ -1,0 +1,15 @@
+.button-link {
+    background-color: #fff;
+    border: 2px solid #000;
+    color: #000;
+    font-family: 'Courier Prime', sans-serif;
+    padding: .7rem .8rem;
+    transition: ease all 500ms;
+}
+
+.button-link:hover {
+    background-color: #eee;
+    border: 2px solid #000;
+    color: #000;
+    transition: ease all 500ms;
+}

@@ -1,0 +1,31 @@
+.layers {
+  box-sizing: border-box;
+  background: white;
+  padding: 15px 10px;
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, .1);
+}
+
+.layers_item {
+  & + .layers_item {
+    margin-top: 10px;
+  }
+}
+
+.layers_field {
+  display: none;
+}
+
+.layers_label {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.layers_pin {
+  opacity: .5;
+  margin-right: 5px;
+
+  .layers_item--checked & {
+    opacity: 1;
+  }
+}
