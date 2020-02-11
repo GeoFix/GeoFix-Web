@@ -1,8 +1,6 @@
 import React from 'react'
 
-import pin_repair from '../../assets/pin_repair.png'
-import pin_shop from '../../assets/pin_shop.png'
-import pin_star from '../../assets/pin_star.png'
+import { PinRepair, PinShop, PinStar } from '../../assets/pins'
 
 import './Layers.scss'
 
@@ -35,13 +33,13 @@ const Layers = ({ layers, open, onLayersChange }) => {
 
   return (
     <ul className={`layers${open ? ' layers--open' : ''}`}>
-      <LayerItem icon={pin_star} value="star" onChange={handleChange} checked={layers.star}>
+      <LayerItem icon={PinStar} value="star" onChange={handleChange} checked={layers.star}>
         Bornes Star
       </LayerItem>
-      <LayerItem icon={pin_repair} value="repair" onChange={handleChange} checked={layers.repair}>
+      <LayerItem icon={PinRepair} value="repair" onChange={handleChange} checked={layers.repair}>
         Bornes Réparation
       </LayerItem>
-      <LayerItem icon={pin_shop} value="retail" onChange={handleChange} checked={layers.retail}>
+      <LayerItem icon={PinShop} value="retail" onChange={handleChange} checked={layers.retail}>
         Magasins
       </LayerItem>
     </ul>

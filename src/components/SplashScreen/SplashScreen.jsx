@@ -5,7 +5,7 @@ import './SplashScreen.scss'
 /**
  * SplashScreen Component
  */
-export const SplashScreen = ({ image, message, blink }) => (
+const SplashScreen = ({ image, message, blink }) => (
   <div className={`splashscreen${blink ? ' splashscreen--blink' : ''}`}>
     <img className="splashscreen_image" src={image} alt={message} />
     <p className="splashscreen_message">{message}</p>
@@ -15,3 +15,5 @@ export const SplashScreen = ({ image, message, blink }) => (
 SplashScreen.propTypes = {}
 
 SplashScreen.defaultProps = {}
+
+export default SplashScreen
