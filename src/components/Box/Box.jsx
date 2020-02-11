@@ -1,52 +1,56 @@
-import React from 'react';
-import './Box.scss';
-import cross from '../../assets/cross.svg';
-import {Map} from "../Map";
-import {InputField} from "../../UIElements/InputField";
+import React from 'react'
+import './Box.scss'
+import cross from '../../assets/cross.svg'
+import { Map } from '../Map'
+import { InputField } from '../../UIElements/InputField'
 
-const Box = ({boxInformation,onClose}) => {
-  return (
-    <>
-      <div className="absoluteCross" onClick={onClose}>
-        <img className="cross" src={cross} alt="Fermer le détail de la boîte" />
-      </div>
-      <h1>Boîte {boxInformation.name}</h1>
-      <form action="">
-        <fieldset>
-          <legend>Informations</legend>
-          <div className="map-container">
-            <Map
-              className="create-box-map"
-              markers={[{
-                lat: boxInformation.geopoint.latitude,
-                long: boxInformation.geopoint.longitude,
-                id: '1234',
-              }]}
-              center={[boxInformation.geopoint.longitude, boxInformation.geopoint.latitude]}
-              controls={false}
-            />
-          </div>
+const Box = ({ boxInformation, onClose }) => (
+  <React.Fragment>
+    <div className="absoluteCross" onClick={onClose}>
+      <img className="cross" src={cross} alt="Fermer le détail de la boîte" />
+    </div>
+    <h1>
+      Boîte
+      {boxInformation.name}
+    </h1>
+    <form action="">
+      <fieldset>
+        <legend>Informations</legend>
+        <div className="map-container">
+          <Map
+            className="create-box-map"
+            markers={[{
+              lat: boxInformation.geopoint.latitude,
+              long: boxInformation.geopoint.longitude,
+              id: '1234',
+            }]}
+            center={[boxInformation.geopoint.longitude, boxInformation.geopoint.latitude]}
+            controls={false}
+          />
+        </div>
 
-          <p>Code : {boxInformation.code}</p>
-        </fieldset>
+        <p>
+          Code :
+          {boxInformation.code}
+        </p>
+      </fieldset>
 
-        <fieldset>
-          <legend>Outils disponibles</legend>
+      <fieldset>
+        <legend>Outils disponibles</legend>
 
-          {boxInformation.tools.map(({ id, name, count }) => (
-            <InputField
-              label={name+'(s)'}
-              name={id}
-              disabled={true}
-              type="number"
-              defaultValue={count}
-              key={id}
-            />
-          ))}
-        </fieldset>
-      </form>
-    </>
-  )
-};
+        {boxInformation.tools.map(({ id, name, count }) => (
+          <InputField
+            label={`${name}(s)`}
+            name={id}
+            disabled
+            type="number"
+            defaultValue={count}
+            key={id}
+          />
+        ))}
+      </fieldset>
+    </form>
+  </React.Fragment>
+)
 
-export {Box};
+export { Box }

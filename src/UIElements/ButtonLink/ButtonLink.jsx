@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from "react-router-dom";
-import { string } from 'prop-types';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { string } from 'prop-types'
 import './ButtonLink.css'
 
 export function ButtonLink({ label, link }) {
@@ -12,4 +12,4 @@ export function ButtonLink({ label, link }) {
 ButtonLink.propTypes = {
   label: string.isRequired,
   link: string.isRequired,
-};
+}

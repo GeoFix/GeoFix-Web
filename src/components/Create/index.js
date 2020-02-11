@@ -1,1 +1,3 @@
-export * from './Create'
+import Create from './Create'
+
+export default Create

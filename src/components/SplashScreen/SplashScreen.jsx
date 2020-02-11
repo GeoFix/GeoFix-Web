@@ -1,19 +1,19 @@
-import React from 'react';
+import React from 'react'
 
-import './SplashScreen.scss';
+import './SplashScreen.scss'
 
 /**
  * SplashScreen Component
  */
-export const SplashScreen = ({image, message, blink}) => {
-  return (
-    <div className={`splashscreen${blink ? ' splashscreen--blink' : ''}`}>
-      <img className="splashscreen_image" src={image} alt={message}/>
-      <p className="splashscreen_message">{message}</p>
-    </div>
-  );
-};
+const SplashScreen = ({ image, message, blink }) => (
+  <div className={`splashscreen${blink ? ' splashscreen--blink' : ''}`}>
+    <img className="splashscreen_image" src={image} alt={message} />
+    <p className="splashscreen_message">{message}</p>
+  </div>
+)
 
-SplashScreen.propTypes = {};
+SplashScreen.propTypes = {}
 
-SplashScreen.defaultProps = {};
+SplashScreen.defaultProps = {}
+
+export default SplashScreen

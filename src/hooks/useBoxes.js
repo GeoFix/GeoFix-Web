@@ -1,38 +1,34 @@
-import {useEffect, useState} from "react";
+import { useEffect, useState } from 'react'
 
-import firebase from "../utils/firebase";
+import firebase from '../utils/firebase'
 
-export const useBoxes = (tools) => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [boxes, setBoxes] = useState([]);
+export const useBoxes = tools => {
+  const [isLoading, setIsLoading] = useState(true)
+  const [boxes, setBoxes] = useState([])
 
   useEffect(() => {
-    setIsLoading(true);
+    setIsLoading(true)
 
     firebase
       .firestore()
       .collection('/boxes')
       .get()
-      .then((snap) => {
-        let boxes = snap.docs
-          .map((doc) => ({
+      .then(snap => {
+        let newBoxes = snap.docs
+          .map(doc => ({
             id: doc.id,
-            ...doc.data()
-          }));
+            ...doc.data(),
+          }))
 
         if (tools.length > 0) {
-          boxes = boxes.filter(box => {
-            return box.tools.find(tool => {
-              return tools.includes(tool.tool.id);
-            });
-          });
+          newBoxes = boxes.filter(box => box.tools.find(tool => tools.includes(tool.tool.id)))
         }
 
-        setBoxes(boxes);
+        setBoxes(newBoxes)
 
-        setIsLoading(false);
-      }, console.error.bind(console));
-  }, [tools]);
+        setIsLoading(false)
+      }, console.error.bind(console))
+  }, [tools])
 
-  return {isLoading, boxes};
-};
+  return { isLoading, boxes }
+}

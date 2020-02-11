@@ -1,0 +1,6 @@
+{
+  "extends": "stylelint-a11y",
+  "rules": {
+    "selector-no-qualifying-type": null
+  }
+}
