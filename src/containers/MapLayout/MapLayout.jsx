@@ -6,14 +6,13 @@ import { useBoxes } from '../../hooks/useBoxes'
 import { useTools } from '../../hooks/useTools'
 import { RoundButton } from '../../UIElements/RoundButton'
 import { Map } from '../../components/Map'
-import { SplashScreen } from '../../components/SplashScreen/SplashScreen'
+import SplashScreen from '../../components/SplashScreen'
 import SearchField from '../../components/SearchField'
 import Layers from '../../components/Layers'
 
-import './MapLayout.scss'
+import { Error, Search } from '../../assets/illustrations'
 
-import illustration_error from '../../assets/undraw_cancel_u1it.svg'
-import illustration_search from '../../assets/undraw_searching_p5ux.svg'
+import './MapLayout.scss'
 
 export default function MapLayout() {
   const [searchTools, setSearchTools] = useState([])
@@ -42,11 +41,11 @@ export default function MapLayout() {
 
   const renderMap = () => {
     if (isLoading) {
-      return <SplashScreen image={illustration_search} message="Recherche des boites..." blink />
+      return <SplashScreen image={Search} message="Recherche des boites..." blink />
     }
 
     if (boxes.length === 0) {
-      return <SplashScreen image={illustration_error} message="Aucune boites à outils aux alentours." />
+      return <SplashScreen image={Error} message="Aucune boites à outils aux alentours." />
     }
 
     return (

@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import classnames from 'classnames'
 
-import './Map.scss'
-import 'ol/ol.css'
-
 // OSM
 import OlXYZ from 'ol/source/XYZ'
 import OlTileLayer from 'ol/layer/Tile'
@@ -16,26 +13,23 @@ import VectorSource from 'ol/source/Vector'
 import { Vector as VectorLayer } from 'ol/layer'
 import { Icon, Style } from 'ol/style'
 import GeoJSON from 'ol/format/GeoJSON'
-
 import Geolocation from 'ol/Geolocation'
 import CircleStyle from 'ol/style/Circle'
 import Fill from 'ol/style/Fill'
 import Stroke from 'ol/style/Stroke'
-import pin_repair from '../../assets/pin_repair.png'
-import pin_shop from '../../assets/pin_shop.png'
-import pin_star from '../../assets/pin_star.png'
-import pin_toolbox_select from '../../assets/pin_toolbox_select.png'
 
-import bicycle_rental from '../../assets/bicycle_rental.geojson'
-import bicycle_repair_station from '../../assets/bicycle_repair_station.geojson'
-import store_bicycle from '../../assets/store_bicycle.geojson'
+import { PinRepair, PinShop, PinStar, PinToolboxSelect } from '../../assets/pins'
+import { BicycleRental, BicycleRepairStation, StoreBicycle } from '../../assets/geojson'
+
+import './Map.scss'
+import 'ol/ol.css'
 
 const iconStyleSelect = new Style({
   image: new Icon({
     anchor: [14, 32],
     anchorXUnits: 'pixels',
     anchorYUnits: 'pixels',
-    src: pin_toolbox_select,
+    src: PinToolboxSelect,
   }),
 })
 const iconStyleRepair = new Style({
@@ -43,7 +37,7 @@ const iconStyleRepair = new Style({
     anchor: [14, 32],
     anchorXUnits: 'pixels',
     anchorYUnits: 'pixels',
-    src: pin_repair,
+    src: PinRepair,
   }),
 })
 const iconStyleStar = new Style({
@@ -51,7 +45,7 @@ const iconStyleStar = new Style({
     anchor: [14, 32],
     anchorXUnits: 'pixels',
     anchorYUnits: 'pixels',
-    src: pin_star,
+    src: PinStar,
   }),
 })
 const iconStyleShop = new Style({
@@ -59,7 +53,7 @@ const iconStyleShop = new Style({
     anchor: [14, 32],
     anchorXUnits: 'pixels',
     anchorYUnits: 'pixels',
-    src: pin_shop,
+    src: PinShop,
   }),
 })
 
@@ -104,7 +98,7 @@ const Map = ({
 
     // VeloStar rental point
     const rentalSource = new VectorSource({
-      url: bicycle_rental,
+      url: BicycleRental,
       format: new GeoJSON(),
     })
 
@@ -116,7 +110,7 @@ const Map = ({
     // rentalVectorLayer.setVisible(false)
     // Repair points
     const repairSource = new VectorSource({
-      url: bicycle_repair_station,
+      url: BicycleRepairStation,
       format: new GeoJSON(),
     })
 
@@ -128,7 +122,7 @@ const Map = ({
     // repairVectorLayer.setVisible(false)
     // Store points
     const storeSource = new VectorSource({
-      url: store_bicycle,
+      url: StoreBicycle,
       format: new GeoJSON(),
     })
     const storeVectorLayer = new VectorLayer({

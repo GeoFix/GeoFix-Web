@@ -1,16 +1,17 @@
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { useHistory } from 'react-router-dom'
+
 import firebase from '../../utils/firebase'
 import { Button, ButtonLink, InputField } from '../../UIElements'
 import { useTools } from '../../hooks/useTools'
 import createBox from '../../hooks/createBox'
+import { Creation } from '../../assets/illustrations'
+
 import { Map } from '../Map'
+import SplashScreen from '../SplashScreen'
 
 import './Create.css'
-import { SplashScreen } from '../SplashScreen/SplashScreen'
-
-import illustration_creation from '../../assets/undraw_creation_rd0e.svg'
 
 export default function Create() {
   const [isLoading, setIsLoading] = useState(false)
@@ -40,7 +41,7 @@ export default function Create() {
   }
 
   if (isLoading) {
-    return <SplashScreen image={illustration_creation} message="Ajout de la boite..." blink />
+    return <SplashScreen image={Creation} message="Ajout de la boite..." blink />
   }
 
   return (
