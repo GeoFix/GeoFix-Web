@@ -15,7 +15,9 @@ input {
     font-family: 'Courier Prime', sans-serif;
 }
 
-input[type='text'] {
+input[type='text'],
+input[type='email'],
+input[type='password'] {
    padding: .5rem .7rem;
 }
 

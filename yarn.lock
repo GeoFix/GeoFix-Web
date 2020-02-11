@@ -9354,10 +9354,10 @@ react-feather@^2.0.3:
   dependencies:
     prop-types "^15.7.2"
 
-react-hook-form@^4.8.2:
-  version "4.8.2"
-  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-4.8.2.tgz#c92aa4f0585296e285188d7415b677ed5256fdaf"
-  integrity sha512-8f0nblsiIiVyYmnVUHumLy12hipzyfz+cyJo30mzPFS8S1cBm1jzOe5d7qt7kXbjaiAOQg6lZ760E9XUAp4pEA==
+react-hook-form@^4.9.3:
+  version "4.9.3"
+  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-4.9.3.tgz#7794a323de2f92e4685f3581b2ea3e52955d14d8"
+  integrity sha512-TPjOl5Hyq1O8VFBxxz9lnbuP/KreJD07GRUI2G8K/JnWy0pln/QaZ/p1fsnJ+8BAwQQB2fhEXSR5XrX2mxYBtw==
 
 react-input-autosize@^2.2.2:
   version "2.2.2"

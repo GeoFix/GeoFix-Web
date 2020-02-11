@@ -5,6 +5,7 @@ import { Create } from "./components/Create";
 
 import './App.css';
 import BoxLayout from "./containers/BoxLayout/BoxLayout";
+import LoginLayout from './containers/LoginLayout/LoginLayout';
 
 export default function App() {
   return (
@@ -12,6 +13,9 @@ export default function App() {
       <Switch>
         <Route path="/" exact>
           <MapLayout />
+        </Route>
+        <Route path="/login">
+          <LoginLayout/>
         </Route>
         <Route path="/create">
           <Create />
