@@ -4,6 +4,6 @@ import './Loader.css'
 
 export function Loader() {
   return (
-    <div className="lds-dual-ring"></div>
+    <div className="lds-dual-ring" />
   )
 }

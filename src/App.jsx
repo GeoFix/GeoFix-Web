@@ -1,10 +1,10 @@
-import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { MapLayout } from "./containers/MapLayout";
-import { Create } from "./components/Create";
+import React from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import MapLayout from './containers/MapLayout'
+import Create from './components/Create'
 
-import './App.css';
-import BoxLayout from "./containers/BoxLayout/BoxLayout";
+import './App.css'
+import BoxLayout from './containers/BoxLayout'
 
 export default function App() {
   return (
@@ -21,5 +21,5 @@ export default function App() {
         </Route>
       </Switch>
     </Router>
-  );
+  )
 }

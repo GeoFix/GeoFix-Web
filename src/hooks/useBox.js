@@ -1,28 +1,26 @@
-import {useEffect, useState} from "react";
+import { useEffect, useState } from 'react'
 
-import firebase from "../utils/firebase";
+import firebase from '../utils/firebase'
 
-export const useBox = (id) => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [box, setBox] = useState(null);
+const useBox = id => {
+  const [isLoading, setIsLoading] = useState(true)
+  const [box, setBox] = useState(null)
 
   useEffect(() => {
-    setIsLoading(true);
+    setIsLoading(true)
 
     firebase
       .firestore()
       .doc(`/boxes/${id}`)
       .get()
-      .then((doc) => {
-        const data = doc.data();
+      .then(doc => {
+        const data = doc.data()
 
-        const promises = data.tools.map((item)=> {
-          return item.tool.get()
-            .then(doc => ({
-              ...doc.data(), 
-              count: item.count,
-            }));
-          });
+        const promises = data.tools.map(item => item.tool.get()
+          .then(tool => ({
+            ...tool.data(),
+            count: item.count,
+          })))
 
         Promise
           .all(promises)
@@ -31,13 +29,15 @@ export const useBox = (id) => {
               setBox({
                 id: doc.id,
                 ...doc.data(),
-                tools
-              });
-              setIsLoading(false);
-            }
+                tools,
+              })
+              setIsLoading(false)
+            },
           )
-      }, console.error.bind(console));
-  }, [id]);
+      }, console.error.bind(console))
+  }, [id])
 
-  return {isLoading, box};
-};
+  return { isLoading, box }
+}
+
+export default useBox

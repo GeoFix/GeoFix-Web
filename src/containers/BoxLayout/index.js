@@ -1,1 +1,3 @@
-export * from './BoxLayout';
+import BoxLayout from './BoxLayout'
+
+export default BoxLayout

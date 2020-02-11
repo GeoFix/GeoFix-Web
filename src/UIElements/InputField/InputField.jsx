@@ -3,9 +3,16 @@ import { bool, func, string } from 'prop-types'
 
 import './InputField.css'
 
-export function InputField ({ error, inputRef, label, name, required, type, defaultValue, disabled }) {
-  const labelAtRight = type === 'checkbox' || type === 'number';
-  const labelField = label ? <label htmlFor={name}>{label}{required ? ' *' : ''}</label> : '';
+export function InputField({
+  error, inputRef, label, name, required, type, defaultValue, disabled,
+}) {
+  const labelAtRight = type === 'checkbox' || type === 'number'
+  const labelField = label ? (
+    <label htmlFor={name}>
+      {label}
+      {required ? ' *' : ''}
+    </label>
+  ) : ''
 
   return (
     <div className={`${labelAtRight ? 'label-right-' : ''}input-field`}>
@@ -28,7 +35,7 @@ export function InputField ({ error, inputRef, label, name, required, type, defa
 InputField.defaultProps = {
   required: false,
   type: 'text',
-};
+}
 
 InputField.propTypes = {
   inputRef: func,
@@ -36,4 +43,4 @@ InputField.propTypes = {
   name: string.isRequired,
   required: bool,
   type: string,
-};
+}

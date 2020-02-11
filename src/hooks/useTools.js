@@ -1,31 +1,31 @@
-import {useEffect, useState} from "react";
+import { useEffect, useState } from 'react'
 
-import firebase from "../utils/firebase";
+import firebase from '../utils/firebase'
 
 export const useTools = () => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [tools, setTools] = useState([]);
+  const [isLoading, setIsLoading] = useState(false)
+  const [tools, setTools] = useState([])
 
   useEffect(() => {
-    setIsLoading(true);
+    setIsLoading(true)
 
     const unsubscribe = firebase
       .firestore()
       .collection('/tools')
-      .onSnapshot((snap) => {
+      .onSnapshot(snap => {
         const boxes = snap.docs
-          .map((doc) => ({
+          .map(doc => ({
             id: doc.id,
-            ...doc.data()
-          }));
+            ...doc.data(),
+          }))
 
-        setTools(boxes);
+        setTools(boxes)
 
-        setIsLoading(false);
-      }, console.error.bind(console));
+        setIsLoading(false)
+      }, console.error.bind(console))
 
-    return () => unsubscribe();
-  }, []);
+    return () => unsubscribe()
+  }, [])
 
-  return {isLoading, tools};
-};
+  return { isLoading, tools }
+}
