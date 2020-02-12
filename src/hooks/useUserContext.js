@@ -5,7 +5,7 @@ import firebase from '../utils/firebase';
 export const UserContext = createContext(null);
 
 const UserProvider = (props) => {
-  const [isLoading, setLoading] = useState(false);
+  const [isLoading, setLoading] = useState(true);
   const [user, setUser] = useState(false);
   const [uid, setUid] = useState(false);
 
@@ -33,8 +33,8 @@ const UserProvider = (props) => {
           return;
         }
 
-        setLoading(false);
         setUser(snap.data());
+        setLoading(false);
       });
   }, [uid]);
 
@@ -78,6 +78,7 @@ const UserProvider = (props) => {
           return;
         }
 
+        console.log(response.user.uid);
         setUid(response.user.uid);
       })
       .catch(e => {

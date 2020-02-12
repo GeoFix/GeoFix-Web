@@ -1,20 +1,25 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import {Redirect} from 'react-router-dom';
 
 import { InputField } from "../../UIElements/InputField";
 import { Button } from "../../UIElements/Button";
-import {useUserContext} from '../../hooks/useUserContext';
+import { useUserContext } from "../../hooks/useUserContext";
 
 /**
  * LoginLayout Component
  */
-const LoginLayout = ({ children }) => {
+const LoginLayout = () => {
   const { register: formRegister, handleSubmit, errors } = useForm({
-    mode: 'onBlur',
+    mode: "onBlur"
   });
   const [isLoading, setLoading] = useState(false);
 
   const { login, user } = useUserContext();
+
+  if (user.uid) {
+    return <Redirect to={{ pathname: '/' }} />
+  }
 
   const onSubmit = ({ email, password }) => {
     if (isLoading) {
