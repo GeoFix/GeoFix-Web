@@ -39,6 +39,7 @@ To discover more about Geocaching philosophy : [Wikipedia](https://en.wikipedia.
 - 💫 [Deploy](#-deploy)
 - ⚙️ [Available Scripts](#-available-scripts)
 - 💻 [Authors](#-authors)
+- 🌐 [Upgrade static geographical data](#-Upgrade-static-geographical-data)
 - 📝 [Licence](#-license)
 
 ## 🚀 Quick Start
@@ -125,6 +126,49 @@ You will also see any lint errors in the console.
 ### `yarn build`
 
 Build application in production mode into `/build` folder
+
+## 🌐 Upgrade static geographical data
+
+static geographical data are extracted from openstreetmap, via [http://overpass-turbo.eu/](http://overpass-turbo.eu/)
+
+### project file
+
+You can find in assets :
+- _bycicle rent_ : [bicycle_rental.geojson](/GeoFix/GeoFix-Web/blob/master/src/assets/bicycle_rental.geojson)
+- _bycicle store_ : [bicycle_repair_station.geojson](/GeoFix/GeoFix-Web/blob/master/src/assets/bicycle_repair_station.geojson)
+- _bycicle repair station_ : [store_bicycle.geojson](/GeoFix/GeoFix-Web/blob/master/src/assets/store_bicycle.geojson)
+
+### upgrade data
+
+[http://overpass-turbo.eu/](http://overpass-turbo.eu/) enable to export openStreetMap data to geoJson
+
+For project we focus on
+  - ["shop"="bicycle"](https://wiki.openstreetmap.org/wiki/FR:Tag:shop%3Dbicycle)
+  - ["amenity"="bicycle_repair_station"](https://wiki.openstreetmap.org/wiki/FR:Tag:amenity%3Dbicycle_repair_station)
+  - ["amenity"="bicycle_rental"](https://wiki.openstreetmap.org/wiki/FR:Tag:amenity%3Dbicycle_rental)
+
+For overpass-turbo use a query like :
+
+~~~~
+[out:json];
+{{geocodeArea:rennes}}->.searchArea;
+(
+  node["shop"="bicycle"](area.searchArea);
+  way["shop"="bicycle"](area.searchArea);
+  relation["shop"="bicycle"](area.searchArea);
+);
+out center;
+~~~~
+
+with :
+- **rennes** is the city, you can use bretagne for region
+- **"shop"="bicycle"** is the type of data to search
+  - ["shop"="bicycle"](https://wiki.openstreetmap.org/wiki/FR:Tag:shop%3Dbicycle) for [store_bicycle.geojson](/GeoFix/GeoFix-Web/blob/master/src/assets/store_bicycle.geojson)
+  - ["amenity"="bicycle_repair_station"](https://wiki.openstreetmap.org/wiki/FR:Tag:amenity%3Dbicycle_repair_station) for [bicycle_repair_station.geojson](/GeoFix/GeoFix-Web/blob/master/src/assets/bicycle_repair_station.geojson)
+  - ["amenity"="bicycle_rental"](https://wiki.openstreetmap.org/wiki/FR:Tag:amenity%3Dbicycle_rental) for [bicycle_rental.geojson](/GeoFix/GeoFix-Web/blob/master/src/assets/bicycle_rental.geojson)
+- **out center;** is used to get only point
+
+Then execute with '_Executer_' then use '_Exporter_' and choose '_GeoJSON_' and update the file
 
 ## ‍💻 Authors
 
